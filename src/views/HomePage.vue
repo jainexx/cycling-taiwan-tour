@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import breadCrum from '../components/breadCrum.vue'
 export default{
     components:{
@@ -13,4 +13,4 @@ export default{
 
 <style scoped lang="scss">
 
-</style>
+</style> -->

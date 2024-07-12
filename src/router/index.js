@@ -7,19 +7,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/HomePage',
-      name: 'HomePage',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HomePage.vue'),
+      component: HomeView,
       meta:{
         breadCrum:[{
           name:"首頁",
-          link:'HomePage'
+          link:'/'
         }
       ]
       }
@@ -35,7 +27,7 @@ const router = createRouter({
       meta:{
         breadCrum:[{
           name:"首頁",
-          link:'HomePage'
+          link:'/'
         },
         {
           name:'自行車路線'
@@ -52,7 +44,7 @@ const router = createRouter({
       meta:{
         breadCrum:[{
           name:"首頁",
-          link:'HomePage'
+          link:'/'
         },
         {
           name:'美食資訊'
@@ -69,7 +61,7 @@ const router = createRouter({
       meta:{
         breadCrum:[{
           name:"首頁",
-          link:'HomePage'
+          link:'/'
         },
         {
           name:'碳排放量'

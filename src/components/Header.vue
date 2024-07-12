@@ -9,7 +9,7 @@ export default {
 
 <template>
     <div class="headerArea">
-        <RouterLink  to="/HomePage"><img src="./assets/Slice 1.svg" alt="logo"></RouterLink>
+        <RouterLink  to="/"><img src="./assets/Slice 1.svg" alt="logo"></RouterLink>
         <!-- <RouterLink class="routeItem" to="/">Home</RouterLink> -->
         <div class="pageChageButton">
             <!-- <RouterLink class="routeItem" to="/HomePage"></RouterLink> -->

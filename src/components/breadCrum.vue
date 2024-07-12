@@ -12,8 +12,8 @@ export default {
     mounted () { this.updateList() },
     watch: { '$route' () { this.updateList() } },
     methods: {
-        routeTo (pRouteTo) {
-            if (this.breadCrumList[pRouteTo].link) this.$router.push(this.breadCrumList[pRouteTo].link)
+        routeTo (index) {
+            if (this.breadCrumList[index].link) this.$router.push(this.breadCrumList[index].link)
         },
         updateList () { this.breadCrumList = this.$route.meta.breadCrum }
         }
@@ -25,9 +25,9 @@ export default {
     <div class="breadCrum">
         <ul>
             <li
-            v-for="(breadCrum, idx) in breadCrumList"
-            :key="idx"
-            @click="routeTo(idx)"
+            v-for="(breadCrum, index) in breadCrumList"
+            :key="index"
+            @click="routeTo(index)"
             :class="{'linked': !!breadCrum.link}">
             {{ breadCrum.name }}
             </li>
