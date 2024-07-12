@@ -15,15 +15,32 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HomePage.vue')
+      component: () => import('../views/HomePage.vue'),
+      meta:{
+        breadCrum:[{
+          name:"首頁",
+          link:'HomePage'
+        }
+      ]
+      }
+
     },
     {
       path: '/BicycleRoute',
-      name: 'BicycleRoutee',
+      name: 'BicycleRoute',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/BicycleRoute.vue')
+      component: () => import('../views/BicycleRoute.vue'),
+      meta:{
+        breadCrum:[{
+          name:"首頁",
+          link:'HomePage'
+        },
+        {
+          name:'自行車路線'
+        }]
+      }
     },
     {
       path: '/FoodTourism',
@@ -31,7 +48,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/FoodTourism.vue')
+      component: () => import('../views/FoodTourism.vue'),
+      meta:{
+        breadCrum:[{
+          name:"首頁",
+          link:'HomePage'
+        },
+        {
+          name:'美食資訊'
+        }]
+      }
     },
     {
       path: '/CarbonEmissions',
@@ -39,7 +65,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CarbonEmissions.vue')
+      component: () => import('../views/CarbonEmissions.vue'),
+      meta:{
+        breadCrum:[{
+          name:"首頁",
+          link:'HomePage'
+        },
+        {
+          name:'碳排放量'
+        }]
+      }
     },
   ]
 })
