@@ -73,7 +73,7 @@ export default {
 }
 body {
   height: 100dvh;
-  width: 100vw;
+  width: 100dvw;
   overflow-x: hidden;
 }
 
@@ -171,7 +171,6 @@ body {
     border: 2px solid rgb(0, 0, 0);
     display: flex;
     margin: auto;
-    opacity: 2;
 
     .square1 {
       height: 400px;
@@ -182,7 +181,6 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      opacity: 2;
       // .tiny1 {
       //   height: 50px;
       //   width: 500px;
@@ -223,7 +221,6 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      opacity: 2;
       // .diminutive1 {
       //   height: 70px;
       //   width: 500px;
