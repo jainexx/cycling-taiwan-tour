@@ -64,7 +64,6 @@ export default{
         <div class="button">為什麼要減少排放量？</div></div>
 </div>
 
-
 </template>
 
 <style scoped lang="scss">

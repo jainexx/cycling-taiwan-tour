@@ -4,7 +4,7 @@
 
 <template>
     <div class="footer">
-        <img src="./assets/Slice 1.svg" alt="" width="15%" height="40%">
+        <img src="./assets/Slice 2-white-01.svg" alt="" width="15%" height="40%">
         <div class="content">
             <p class="firstContent">從北到南&nbsp,&nbsp&nbsp&nbsp從東到西,&nbsp&nbsp</p>
             <p class="secondContent">騎著公共自行車探索台灣的每一個角落﹒</p>
