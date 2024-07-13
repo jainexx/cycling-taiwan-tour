@@ -167,84 +167,86 @@ body {
   .Trapzoid1 {
     height: 400px;
     width: 1000px;
-    background-color: #c6e058;
-    border: 2px solid rgb(0, 0, 0);
+    background-color: #d9d9d9;
+    border: 1px solid rgb(0, 0, 0);
     display: flex;
     margin: auto;
+    opacity: 0.2;
 
     .square1 {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      border: 2px solid rgb(0, 0, 0);
+      // border: 2px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      // .tiny1 {
-      //   height: 50px;
-      //   width: 500px;
-      //   background-color: rgb(17, 254, 194);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .tiny2 {
-      //   height: 50px;
-      //   width: 500px;
-      //   background-color: rgb(17, 254, 194);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .tiny3 {
-      //   height: 50px;
-      //   width: 500px;
-      //   background-color: rgb(17, 254, 194);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .tiny4 {
-      //   height: 50px;
-      //   width: 500px;
-      //   background-color: rgb(17, 254, 194);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .tiny5 {
-      //   height: 50px;
-      //   width: 500px;
-      //   background-color: rgb(17, 254, 194);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
+
+      .tiny1 {
+        height: 50px;
+        width: 500px;
+        background-color: rgb(17, 254, 194);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .tiny2 {
+        height: 50px;
+        width: 500px;
+        background-color: rgb(17, 254, 194);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .tiny3 {
+        height: 50px;
+        width: 500px;
+        background-color: rgb(17, 254, 194);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .tiny4 {
+        height: 50px;
+        width: 500px;
+        background-color: rgb(17, 254, 194);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .tiny5 {
+        height: 50px;
+        width: 500px;
+        background-color: rgb(17, 254, 194);
+        // border: 2px solid rgb(0, 0, 0);
+      }
     }
     .square2 {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      border: 2px solid rgb(0, 0, 0);
+      // border: 2px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      // .diminutive1 {
-      //   height: 70px;
-      //   width: 500px;
-      //   background-color: rgb(254, 234, 17);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .diminutive2 {
-      //   height: 70px;
-      //   width: 500px;
-      //   background-color: rgb(254, 234, 17);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .diminutive3 {
-      //   height: 70px;
-      //   width: 500px;
-      //   background-color: rgb(254, 234, 17);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
-      // .diminutive4 {
-      //   height: 70px;
-      //   width: 500px;
-      //   background-color: rgb(254, 234, 17);
-      //   border: 2px solid rgb(0, 0, 0);
-      // }
+      .diminutive1 {
+        height: 70px;
+        width: 500px;
+        background-color: rgb(254, 234, 17);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .diminutive2 {
+        height: 70px;
+        width: 500px;
+        background-color: rgb(254, 234, 17);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .diminutive3 {
+        height: 70px;
+        width: 500px;
+        background-color: rgb(254, 234, 17);
+        // border: 2px solid rgb(0, 0, 0);
+      }
+      .diminutive4 {
+        height: 70px;
+        width: 500px;
+        background-color: rgb(254, 234, 17);
+        // border: 2px solid rgb(0, 0, 0);
+      }
     }
   }
 }
