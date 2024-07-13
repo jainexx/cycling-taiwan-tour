@@ -34,8 +34,9 @@ export default{
     border: 2px solid black;
     width: 70%;
     height: 900px;
-    position: absolute;
-    left: 15%;
+    // position: absolute;
+    // left: 15%;
+    margin: auto;
 
 }
 
@@ -45,9 +46,10 @@ export default{
     align-items: center;
     justify-content: space-between;
     font-size: 15pt;
-    position: absolute;
-    top: 193%;
-    left: 30%;
+    margin: auto;
+    // position: absolute;
+    // top: 193%;
+    // left: 30%;
 
     .lineone{
         width: 200px;
@@ -64,9 +66,9 @@ export default{
     border: 2px solid black;
     height: 400px;
     width: 70%;
-    position: absolute;
-    left: 15%;
-    margin-top: 1000px;
+    // position: absolute;
+    margin:auto;
+    // margin-top: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;

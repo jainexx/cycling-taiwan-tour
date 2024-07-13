@@ -21,7 +21,7 @@ export default{
     <div class="container1">
         <div class="btnContainerMiddle1">
             <button id="splitBtn">美&nbsp&nbsp食&nbsp&nbsp饗&nbsp&nbsp宴</button>
-            <button id="splitBtn"> 溫&nbsp&nbsp馨&nbsp&nbsp旅&nbsp&nbsp宿</button>
+            <!-- <button id="splitBtn"> 溫&nbsp&nbsp馨&nbsp&nbsp旅&nbsp&nbsp宿</button> -->
         </div>
         <div class="container2"></div>
         <div class="container3">
