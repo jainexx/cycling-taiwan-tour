@@ -11,12 +11,12 @@ export default{
     <breadCrum />
     <div class="topImage">
         <div class="threeImg">
-            <img src="./img/topbanner01.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
             <img src="./img/topbanner02.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
             <img src="./img/topbanner03.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
 
         <div class="women">
-            <img src="./img/ubike-woman.svg" alt=""width="350px">
+            <img src="../components/assets/" alt=""width="350px">
         </div></div>
 
         <div class="topcontent">
