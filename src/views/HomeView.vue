@@ -11,12 +11,12 @@ export default{
     <breadCrum />
     <div class="topImage">
         <div class="threeImg">
-            <img src="../components/assets/" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
-            <img src="./img/topbanner02.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
-            <img src="./img/topbanner03.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
 
         <div class="women">
-            <img src="../components/assets/" alt=""width="350px">
+            <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350px">
         </div></div>
 
         <div class="topcontent">
@@ -34,7 +34,7 @@ export default{
             隨時隨地都能借車還車，讓你的環台之旅更加便捷輕鬆。</p>
             <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
             <div class="button">馬上開始旅程！</div>
-            <img src="./img/bicycleline01.png" alt="" width="850px" style="position: absolute;top: -40px;left: 440px;"></div>
+            <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850px" style="position: absolute;top: -40px;left: 440px;"></div>
     </div>
 
     <div class="foodBox">
@@ -48,7 +48,7 @@ export default{
             還是現代都市的繁華，都能在這裡找到屬於你的驚喜。<br>
             開啟你的多元台灣探索之旅吧！</p>
         <div class="button">前往我夢想的目的地</div>
-        <img src="./img/tw-01.png" alt="" width="550px" style="position: absolute;top: 50px;left: 150px;">
+        <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="550px" style="position: absolute;top: 50px;left: 150px;">
 
         </div>
     </div>
@@ -75,7 +75,7 @@ export default{
   .threeImg {
     display: flex;
     justify-content: space-around;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 110px;
     animation-name: example;
     animation-duration: 3s;
@@ -97,7 +97,7 @@ export default{
   .women {
     img {
       position: absolute;
-      top: 200px;
+      top: 260px;
       left: 190px;
       // transform: translateX(50%);
       // transition: all 0.5s;

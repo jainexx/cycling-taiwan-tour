@@ -43,7 +43,7 @@ export default {
         display: flex;
         list-style: none;
         // font-size: font(1);
-        margin-left: -20px;
+        margin-left: 20px;
     }
     li{
         cursor: pointer;
