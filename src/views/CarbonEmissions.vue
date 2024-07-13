@@ -49,20 +49,6 @@ export default{
       
     </div>
 
-    <div class="footer">
-      <img src="./footerLogo.svg" alt="" width="15%" height="40%" />
-      <div class="content">
-        <p class="firstContent">
-          從北到南&nbsp,&nbsp&nbsp&nbsp從東到西,&nbsp&nbsp
-        </p>
-        <p class="secondContent">騎著公共自行車探索台灣的每一個角落﹒</p>
-        <p class="thirdContent">
-          From North to South,East to West,Explore Every Corner of Taiwan on a
-          Public Bike.&nbsp&nbsp
-        </p>
-      </div>
-      <div class="footerBotLine"></div>
-    </div>
 
 </template>
 
