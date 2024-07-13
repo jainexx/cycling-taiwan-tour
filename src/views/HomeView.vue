@@ -11,12 +11,12 @@ export default{
     <breadCrum />
     <div class="topImage">
         <div class="threeImg">
-            <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300px" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
 
         <div class="women">
-            <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350px">
+            <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350dvw">
         </div></div>
 
         <div class="topcontent">
@@ -34,7 +34,7 @@ export default{
             隨時隨地都能借車還車，讓你的環台之旅更加便捷輕鬆。</p>
             <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
             <div class="button">馬上開始旅程！</div>
-            <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850px" style="position: absolute;top: -40px;left: 440px;"></div>
+            <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850dvw" style="position: absolute;top: -40px;left: 440px;"></div>
     </div>
 
     <div class="foodBox">
@@ -48,7 +48,7 @@ export default{
             還是現代都市的繁華，都能在這裡找到屬於你的驚喜。<br>
             開啟你的多元台灣探索之旅吧！</p>
         <div class="button">前往我夢想的目的地</div>
-        <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="550px" style="position: absolute;top: 50px;left: 150px;">
+        <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="550" style="position: absolute;top: 50px;left: 150px;">
 
         </div>
     </div>
@@ -76,8 +76,8 @@ export default{
   .threeImg {
     display: flex;
     justify-content: space-around;
-    padding-top: 40px;
-    padding-left: 110px;
+    padding-top: 5dvh;
+    padding-left: 5dvw;
     animation-name: example;
     animation-duration: 3s;
     animation-direction: reverse;
@@ -98,8 +98,8 @@ export default{
   .women {
     img {
       position: absolute;
-      top: 260px;
-      left: 190px;
+      top: 30dvh;
+      left: 10dvw;
       // transform: translateX(50%);
       // transition: all 0.5s;
       animation-name: wom;
@@ -125,7 +125,7 @@ export default{
 
 .topcontent {
   position: absolute;
-  top: 320px;
+  top: 40dvh;
   left: 50%;
   color: #f5f5f5;
   font-size: 15pt;
@@ -142,13 +142,13 @@ export default{
   @keyframes example {
     from {
       opacity: 100%;
-      top: 320px;
+      top: 40dvh;
       filter: blur(0px);
     }
 
     to {
       opacity: 0%;
-      top: 300px;
+      top: 30dvh;
       filter: blur(6px);
     }
   }
@@ -161,17 +161,17 @@ export default{
 
 .bicycleLineBox {
   width: 100%;
-  height: 450px;
+  height: 50dvh;
   background-color: #d9d9d9;
   border-radius: 30px 30px 0 0px;
-  margin-top: -30px;
+  margin-top: -5dvh;
   position: sticky;
   top: 0;
 
   .text{
     position: absolute;
-    top: 80px;
-    left: 170px;
+    top: 8dvh;
+    left: 12dvw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -186,11 +186,11 @@ export default{
   }
 
   p {
-    padding-top: 10px;
+    padding-top: 3dvh;
     font-size: 10pt;
     letter-spacing: 2px;
     line-height: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 2dvh;
   }
 
   .button {
@@ -205,7 +205,7 @@ export default{
     align-items: center;
     background-color: #39ab4b;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 3dvh;
 
     &:hover{
       scale: 0.95;
@@ -219,12 +219,12 @@ export default{
 
 .foodBox {
   width: 100%;
-  height: 450px;
+  height: 50dvh;
   background-color: #f5f5f5;
   border-radius: 30px 30px 0 0px;
   margin-top: -30px;
   position: sticky;
-  top: 20px;
+  top: 5dvh;
   .textbox {
     display: flex;
     justify-content: center;
@@ -241,7 +241,7 @@ export default{
     }
 
     p {
-      padding-top: 10px;
+      padding-top: -10px;
       font-size: 10pt;
       letter-spacing: 2px;
       line-height: 25px;
@@ -261,7 +261,7 @@ export default{
       align-items: center;
       background-color: #39ab4b;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 1dvh;
 
       &:hover{
         scale: 0.95;
@@ -280,12 +280,12 @@ export default{
 
 .carbonBox {
   width: 100%;
-  height: 450px;
+  height: 50dvh;
   background-color: #d5d5d5;
   border-radius: 30px 30px 0 0px;
   margin-top: -30px;
   position: sticky;
-  top: 40px;
+  top: 10dvh;
 
 
 
