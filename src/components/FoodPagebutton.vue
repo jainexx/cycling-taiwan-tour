@@ -16,7 +16,9 @@ export default{
                 btn.backgroundColor ='#C6E058'
             })
             clickedButton.backgroundColor = '#39AB4B'
+            this.$emit('area-change',clickedButton.text)
             }
+        
         }
     }
 
