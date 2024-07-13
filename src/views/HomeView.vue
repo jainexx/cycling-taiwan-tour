@@ -63,6 +63,8 @@ export default{
                 選擇腳踏車環台，不僅是一種出行方式，更是一種生活態度。<br>讓我們一起騎上腳踏車，開啟一段難忘的環台之旅吧！</p>
         <div class="button">為什麼要減少排放量？</div></div>
 </div>
+
+
 </template>
 
 <style scoped lang="scss">
@@ -124,7 +126,7 @@ export default{
 
 .topcontent {
   position: absolute;
-  top: 270px;
+  top: 320px;
   left: 50%;
   color: #f5f5f5;
   font-size: 15pt;
@@ -141,13 +143,13 @@ export default{
   @keyframes example {
     from {
       opacity: 100%;
-      top: 270px;
+      top: 320px;
       filter: blur(0px);
     }
 
     to {
       opacity: 0%;
-      top: 250px;
+      top: 300px;
       filter: blur(6px);
     }
   }

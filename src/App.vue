@@ -17,6 +17,7 @@ import Header from './components/Header.vue'
   <div class="content">
     <RouterView />
   </div>
+
 </template>
 
 <style scoped lang="scss">
