@@ -274,7 +274,7 @@ export default {
 
 :deep(.owl-nav .owl-next) {
     position: absolute;
-    top: 50%;
+    top: 250px;
     right: 0;
     opacity: 1;
     font-size: 50px !important;
@@ -284,7 +284,7 @@ export default {
 
 :deep(.owl-nav .owl-prev) {
     position: absolute;
-    top: 50%;
+    top: 250px;
     left: 0;
     opacity: 1;
     font-size: 50px !important;
