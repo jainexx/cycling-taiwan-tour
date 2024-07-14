@@ -77,8 +77,8 @@ export default {
     justify-content: center;
     align-items: center;
     .banner{
-        width: 700px;
-        height: 350px;
+        width: 1150px;
+        height: 400px;
         border: 1px solid black;
     }
 

@@ -274,19 +274,21 @@ export default {
 
 :deep(.owl-nav .owl-next) {
     position: absolute;
-    top: calc(50% - 25px);
+    top: 50%;
     right: 0;
     opacity: 1;
-    font-size: 30px !important;
+    font-size: 50px !important;
     z-index: 1;
+    transform: translateY(-50%);
 }
 
 :deep(.owl-nav .owl-prev) {
     position: absolute;
-    top: calc(50% - 25px);
+    top: 50%;
     left: 0;
     opacity: 1;
-    font-size: 30px !important;
+    font-size: 50px !important;
     z-index: 1;
+    transform: translateY(-50%);
 }
 </style>
