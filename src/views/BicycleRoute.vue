@@ -1,8 +1,10 @@
 <script>
-import breadCrum from '../components/breadCrum.vue'
-export default{
-    components:{
-        breadCrum
+import breadCrum from '../components/breadCrum.vue';
+import Carousel from '../components/Carousel.vue';
+export default {
+    components: {
+        breadCrum,
+        Carousel
     }
 }
 </script>
@@ -22,7 +24,9 @@ export default{
     <div class="linetwo">
     </div></div>
     <div class="smallBanner">
-        <div class="banner"></div>
+        <div class="banner">
+            <Carousel />
+        </div>
     </div>
 
 </template>
