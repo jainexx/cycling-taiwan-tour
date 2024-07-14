@@ -11,26 +11,6 @@ export default{
             selectedArea:'北部地區',
             areaTitle:'探索台灣北部的美食魅力',
             areaIntro:'台灣北部﹐擁有豐富多樣的美食文化﹒從台北的夜市小吃﹐到基隆的海鮮盛宴﹐每一道料理都蘊含著獨特的地方風味﹒來到北部﹐一定要品嘗經典的蚵仔煎﹑牛肉麵﹐以及新竹的貢丸湯﹒每一口都是對傳統與創新的完美詮釋',
-            lines: [
-            [
-                { imageUrl: "../../components/assets/food-img/北部/five.jpg", width: "25%"},
-                { imageUrl: "../components/assets/food-img/北部/小王煮瓜.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/忠貞米干.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/東門市場米粉.jpg", width: "25%" }
-            ],
-            [
-                { imageUrl: "../components/assets/food-img/北部/東門市場米粉.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/榮記客家湯圓.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/正好鮮肉小籠包.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/永心鳳茶.jpg", width: "25%" }
-            ],
-            [
-                { imageUrl: "../components/assets/food-img/北部/湳雅夜市-騎士卷.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/牛家莊.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/福掛包.jpg", width: "25%" },
-                { imageUrl: "../components/assets/food-img/北部/菊姐大腸圈.jpg", width: "25%" }
-            ]
-        ],
     }
     },
     methods:{
@@ -49,18 +29,6 @@ export default{
                 this.areaTitle = '探索台灣東部的美食魅力';
                 this.areaIntro = '台灣東部地區，如花蓮和台東，不僅風景優美，也以其特有的原住民文化和新鮮的海產著稱。無論是享受海邊美景還是品'
             }
-        },
-        toggleFoodBoxWidth(boxIndex) {
-      // 将当前行的所有foodBox宽度设为0，除了被点击的那个
-            this.lines.forEach(line => {
-                line.forEach(box=>{
-                    box.width='20%'
-                    console.log(box.image)
-                })
-            })
-            this.lines.forEach(line =>{
-                line[boxIndex].width ='80%'
-            })
         },
     }
 }
@@ -102,33 +70,29 @@ export default{
             
             <div v-if="selectedArea === '北部地區'" class="northfoodFrame" id="northfoodFrame">
 
-                <div v-for="(line, lineIndex) in lines" :key="lineIndex" class="Line" id="line">
-                    <div  v-for="(box, boxIndex) in line" :key="boxIndex" class="foodBox" :style="{ width: box.width }" @click="toggleFoodBoxWidth(boxIndex)">
+                <div  class="Line" id="line">
+                    <div   class="foodBox" >
                         <div class="info" id="info">
                             <p class="title">店家資訊</p>
                         </div>
-                        <img :src="box.imageUrl"  alt="foodImage">
+                        <img src="../components/assets/food-img/北部/five.jpg"  alt="foodImage">
                     </div>
-                </div>
-                    <!-- <div  v-for="(foodBox, boxIndex) in line" :key="boxIndex" class="foodBox" :style="{ width: foodBox.width }" @click="toggleFoodBoxWidth(lineIndex, boxIndex)">
                     <div class="foodBox">
                         <div class="info" id="info">
                             <p class="title">店家資訊</p>
                         </div>
                         <img src="../components/assets/food-img/北部/小王煮瓜.jpg"alt="" id="northfoodImg">
                     </div>
-                    <div  v-for="(foodBox, boxIndex) in line" :key="boxIndex" class="foodBox" :style="{ width: foodBox.width }" @click="toggleFoodBoxWidth(lineIndex, boxIndex)">
                     <div class="foodBox">
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/北部/忠貞米干.jpg"alt="" id="northfoodImg">
                     </div>
-                    <div  v-for="(foodBox, boxIndex) in line" :key="boxIndex" class="foodBox" :style="{ width: foodBox.width }" @click="toggleFoodBoxWidth(lineIndex, boxIndex)">
                     <div class="foodBox">
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/北部/東門市場米粉.jpg"alt="" id="northfoodImg">
                     </div>
-                </div> -->
-                <!-- <div class="Line" id="line">
+                </div> 
+                <div class="Line" id="line">
                     <div class="foodBox" id="foodBox">
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/北部/東門市場米粉.jpg"alt="" id="northfoodImg">
@@ -163,7 +127,7 @@ export default{
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/北部/菊姐大腸圈.jpg"alt="" id="northfoodImg">
                     </div>
-                </div> -->
+                </div>
             </div>
             <div v-if="selectedArea === '中部地區'"class="midfoodFrame" id="midfoodFrame">
                 <div class="Line" id="line">
