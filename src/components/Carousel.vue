@@ -226,32 +226,14 @@ export default {
 
 
 <style scoped lang="scss">
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container {
     .slider {
         margin-bottom: 20px;
         position: relative;
 
-        .owl-item {
-            &.active.center {
-                .slider-card {
-                    transform: scale(1.15);
-                    opacity: 1;
-                }
-            }
+        :deep(.owl-item.active.center .slider-card) {
+            transform: scale(1.15);
+            opacity: 1;
         }
 
         .slider-card {
@@ -263,10 +245,8 @@ body {
             opacity: 0.5;
             transition: all 0.3s;
 
-            &:hover {
-                .cardBody {
+            &:hover .cardBody {
                 display: block;
-                }
             }
 
             img {
@@ -292,23 +272,21 @@ body {
     }
 }
 
-.owl-nav {
-    .owl-next {
-        position: absolute;
-        top: calc(50% - 25px);
-        right: 0;
-        opacity: 1;
-        font-size: 30px !important;
-        z-index: 1;
-    }
+:deep(.owl-nav .owl-next) {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+}
 
-    .owl-prev {
-        position: absolute;
-        top: calc(50% - 25px);
-        left: 0;
-        opacity: 1;
-        font-size: 30px !important;
-        z-index: 1;
-    }
+:deep(.owl-nav .owl-prev) {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
 }
 </style>
