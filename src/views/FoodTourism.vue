@@ -3,12 +3,16 @@ import breadCrum from '../components/breadCrum.vue'
 import foodPagebutton from '../components/FoodPagebutton.vue'
 import FoodNorth from '../components/FoodNorth.vue'
 import FoodMid from '../components/FoodMid.vue'
+import FoodSouth from '../components/FoodSouth.vue'
+import FoodEast from '../components/FoodEast.vue'
 export default{
     components:{
         breadCrum,
         foodPagebutton,
         FoodNorth,
-        FoodMid
+        FoodMid,
+        FoodSouth,
+        FoodEast
     },
     data(){
         return{
@@ -83,9 +87,13 @@ export default{
                 
             <div v-if="selectedArea === '中部地區'"class="midfoodFrame" id="midfoodFrame">
                 <FoodMid />
-                <!-- <div class="Line" id="line">
+                <!-- <div class="Line" id="line"> 
                     <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
+                        <div class="intro" id="info">
+                            <p class="title">小王煮瓜</p>
+                            <p class="content">台北市萬華區華西街17之4號攤位153號</p>
+                            <button type="button">前往地圖</button>
+                        </div>
                         <img src="../components/assets/food-img/中部/三灣鵝肉.jpg" alt="">
                     </div>
                     <div class="foodBox" id="foodBox">
@@ -134,12 +142,17 @@ export default{
                     </div>
                     <div class="foodBox" id="foodBox"><div class="info" id="info"></div>
                     <img src="../components/assets/food-img/中部/阿斗伯冷凍芋.jpg" alt=""></div>
-                </div> -->
+                </div>  -->
             </div>
             <div v-if="selectedArea === '南部地區'" class="southfoodFrame" id="southfoodFrame">
-                <div class="Line" id="line">
+                <FoodSouth />
+                <!-- <div class="Line" id="line">
                     <div class="foodBox">
-                        <div class="info" id="info"></div>
+                        <div class="intro" id="info">
+                            <p class="title">小王煮瓜</p>
+                            <p class="content">台北市萬華區華西街17之4號攤位153號</p>
+                            <button type="button">前往地圖</button>
+                        </div>
                         <img src="../components/assets/food-img/南部/六千牛肉湯.jpg" alt="">
                     </div>
                     <div class="foodBox" id="foodBox">
@@ -190,10 +203,11 @@ export default{
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/南部/黃記涼麵涼圓.jpg" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
             <div v-if="selectedArea === '東部地區'"class="eastfoodFrame" id="eastfoodFrame">
-                <div class="Line" id="line">
+                <FoodEast />
+                <!-- <div class="Line" id="line">
                     <div class="foodBox">
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/東部/一耕食堂.jpg" alt="">
@@ -246,7 +260,7 @@ export default{
                         <div class="info" id="info"></div>
                         <img src="../components/assets/food-img/東部/葉式海鮮.jpg" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -440,23 +454,46 @@ body{
                     overflow: hidden;
                     // overflow: visible;
                     transition: 0.8s;
-                    .info{
-                        position: absolute;
-                        width: 100%;
+                    width: 100%;
+                    .intro{
                         height: 100%;
-                        top:0;
-                        left:0;
-                        background-color: rgba(198, 224, 88, 1);
-                        transition: 0.2s;
-                        // display: none;
-                    }
-                    img{
+                        width: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;
-                        // object-fit: contain;
-                        width: 430px;
-                        height: 300px;
+                        opacity: 0;
+                        transition: 0.5s;
+                        background-color: rgba(198, 224, 88, 1);
+                        z-index: -1;
+                        text-align: center;
+                        color: #39AB4B;
+                        .title{
+                            font-size: 36px;
+                            }
+                        .content{
+                            margin-top: 40px;
+                            font-size: 24px;
+                        }
+                        button{
+                            margin-top:50px;
+                            width: 50%;
+                            height: 15%;
+                            border-radius:20px ;
+                            background-color: #39AB4B;
+                            color: white;
+                            font-size: 24px;
+                            border:none;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        .intro{
+                            opacity: 1;
+                            z-index: 99;
+                        }
                     }
                 }
             }

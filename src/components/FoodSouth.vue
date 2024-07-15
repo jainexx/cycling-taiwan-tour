@@ -2,32 +2,32 @@
 export default {
     data() {
     return {
-        foodRowMid:[
+        foodRowSouth:[
             [
-            {image:"../public/food-img/中部/三灣鵝肉.jpg" ,title:"三灣鵝肉",address:"苗栗縣三灣鄉中正路28號"},
-            {image:"../public/food-img/中部/大元餅行.jpg",title:"大元餅行",address:"彰化市民生路129巷4號"},
-            {image:"../public/food-img/中部/王記菜頭粿.jpg",title:"王家蔡頭粿",address:"台中市中區三民路二段87號"},
-            {image:"../public/food-img/中部/豆子芋園.jpg",title:"豆子芋園",address: "台中市龍井區新興路1巷23號"}
+            {image:"../public/food-img/南部/六千牛肉湯.jpg" ,title:"六千牛肉湯",address:"台南市中西區海安路一段63號"},
+            {image:"../public/food-img/南部/北門砂鍋魚頭.jpg",title:"北門砂鍋魚頭",address:"嘉義市東區忠孝路284-1號"},
+            {image:"../public/food-img/南部/古早味素食麻糬嬤.jpg",title:"古早味素食麻糬嬤",address:"屏東縣屏東市民權路43-9號"},
+            {image:"../public/food-img/南部/吉林海產粥.jpg",title:"吉林海產粥",address: "高雄市大樹區竹寮路149號"}
             ],
             [
-            {image:"../public/food-img/中部/林記古早味麻薏湯.jpg" ,title:"林記古早味麻薏湯",address:"台中市中區三民路二段3-12號"},
-            {image:"../public/food-img/中部/阿三肉圓.jpg",title:"阿三肉圓",address:"彰化縣彰化市三民路242號"},
-            {image:"../public/food-img/中部/阿斗伯冷凍芋.jpg",title:"阿斗伯冷凍芋",address:"台中市中區成功路356號"},
-            {image:"../public/food-img/中部/游記扣仔嗲.jpg" ,title:"游記扣仔爹",address:"南投縣埔里鎮隆生路80號"}
+            {image:"../public/food-img/南部/松記羊肉.jpg" ,title:"松記羊肉",address:"高雄市左營區海平路100巷31-1號"},
+            {image:"../public/food-img/南部/林家豬腳.jpg",title:"林家豬腳",address:"屏東縣萬巒鄉民和路1-4號"},
+            {image:"../public/food-img/南部/邵陽燒餅.jpg",title:"邵陽燒餅",address:"高雄市茄萣區濱海路一段558號"},
+            {image:"../public/food-img/南部/黃記涼麵涼圓.jpg" ,title:"黃記涼麵涼圓",address:"嘉義市東區興中街6號"}
             ],
             [
-            {image:"../public/food-img/中部/媽祖埔豆腐張.jpg",title:"媽祖埔豆腐張",address:"雲林縣虎尾鎮林森路二段471號"},
-            {image:"../public/food-img/中部/楊媽媽豬籠粄客家米食.jpg",title:"楊媽媽豬籠粄客家米食",address: "苗栗縣南庄鄉中正路26號"},
-            {image:"../public/food-img/中部/源記粉粿冰.jpg",title:"源記粉粿冰",address:"彰化縣鹿港鎮民族路198號"},
-            {image:"../public/food-img/中部/蓮心雞腳凍.jpg",title:"蓮心雞腳凍",address:"台中市烏日區中山路一段405號"}
+            {image:"../public/food-img/南部/楊寶寶.jpg",title:"楊寶寶",address:"高雄市楠梓區朝明路106號"},
+            {image:"../public/food-img/南部/矮仔成蝦仁飯.jpg",title:"矮仔成蝦仁飯",address: "台南市中西區海安路一段66號"},
+            {image:"../public/food-img/南部/劉里長雞肉飯.jpg",title:"劉里長雞肉飯",address:"嘉義市東區公明路197號"},
+            {image:"../public/food-img/南部/劉家汕頭麵.jpg",title:"劉家汕頭麵",address:"台南市中西區民權路三段184號之1號"}
             ]
         ]
         }
-    },
+    }
 }
 </script>
 <template>
-    <div class="foodRow" v-for="Row in foodRowMid" >
+    <div class="foodRow" v-for="Row in foodRowSouth" >
         <div class="foodBox" v-for="item in Row">
             <div class="intro">
                 <p class="title" >{{ item.title }}</p>
@@ -37,6 +37,7 @@ export default {
             <img :src="item.image" alt="">
         </div>
     </div>
+        
 </template>
 
 
