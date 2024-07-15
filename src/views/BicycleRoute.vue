@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="scss">
 
-.map{
+.map {
     width: 100dvw;
     height: 100dvh;
     background-color: #34AB4B;
@@ -48,7 +48,7 @@ export default {
     align-items: center;
 }
 
-.smallBannerTitle{
+.smallBannerTitle {
     width: 600px;
     display: flex;
     align-items: center;
@@ -107,6 +107,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin-bottom: 3%;
+
     .banner{
         width: 1400px;
         height: 400px;

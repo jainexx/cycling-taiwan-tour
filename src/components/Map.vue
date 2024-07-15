@@ -122,6 +122,7 @@ $fifthColor: #d9d9d9;
                     border-radius: 5px;
                     font-weight: bold;
                     font-size: 1.5rem;
+                    margin-bottom: 2%;
                 }
             }
 
