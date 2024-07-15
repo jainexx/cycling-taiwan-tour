@@ -4,7 +4,7 @@ export default {
     return {
         foodRowNorth:[
             [
-            {image:"../public/food-img/north/food1.jpg" ,title:"小王煮瓜",address:"台北市萬華區華西街17之4號攤位153號"},
+            {image:"../public/food-img/north/food1.jpg" ,title:"小王煮瓜",address:"台北市萬華區華西街17之4號攤位153號" },
             {image:"../public/food-img/north/food2.jpg",title:"吳記螃蟹羹",address:"基隆市仁愛區仁三路37號第5號攤"},
             {image:"../public/food-img/north/food3.jpg",title:"福卦包",address:"臺北市台北市中山區長安東路一段53巷16號"},
             {image:"../public/food-img/north/忠貞米干.jpg",title:"忠貞米干",address: "桃園市中壢區中正五路210號"}
@@ -21,20 +21,37 @@ export default {
             {image:"../public/food-img/north/牛家莊.jpg",title:"牛家莊",address:"桃園市桃園區縣府路310號"},
             {image:"../public/food-img/north/榮記客家湯圓.jpg",title:"榮記客家湯圓",address:"新竹市東區武昌街64號"}
             ]
-        ]
+        ],
+
+        }
+    },
+    methods:{
+        widthAdjust(rowIndex, boxIndex) {
+        this.foodRowNorth[rowIndex].forEach((item, idx) => {
+
+            if (idx === boxIndex){
+                    item.isActive = !item.isActive
+                    item.widthPercentage = item.isActive ?'60%' :'25%' 
+                } else {
+                    item.isActive = false; 
+                    item.widthPercentage = '20%'; 
+                }
+            })
         }
     }
+
 }
+
 </script>
 <template>
-    <div class="foodRow" v-for="Row in foodRowNorth" >
-        <div class="foodBox" v-for="item in Row">
+    <div class="foodRow" v-for="(Row,rowIndex) in foodRowNorth" :key="rowIndex" >
+        <div class="foodBox" v-for="(item,boxIndex) in Row" :key="boxIndex" >
             <div class="intro">
                 <p class="title" >{{ item.title }}</p>
                 <p class="content">{{item.address}}</p>
                 <button type="button">前往地圖</button>
             </div>
-            <img :src="item.image" alt="">
+            <img :src="item.image" alt=""  @click="widthAdjust(rowIndex,boxIndex)" :class="{active: item.isActive}">
         </div>
     </div>
         
@@ -56,6 +73,7 @@ export default {
         width: 25%;
         height: 100%;
         position: relative;
+        transition: 1s;
         .intro{
             width: 100%;
             height: 100%;
@@ -89,13 +107,15 @@ export default {
         img{
             width: 100%;
             height: 100%;
-
         }
         &:hover{
             .intro{
                 opacity: 1;
                 z-index: 99;
             }
+        }
+        &.active{
+            width: 100%;
         }
     }
 }
