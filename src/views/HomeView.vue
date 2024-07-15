@@ -14,7 +14,7 @@ export default{
             <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
             <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
             <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
-          </div>
+        </div>
         <div class="women">
             <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350dvw">
         </div>
