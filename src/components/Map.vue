@@ -57,7 +57,7 @@ $fifthColor: #d9d9d9;
 
 .mapSection {
     width: 80%;
-    height: 900px;
+    height: 90%;
     position: absolute;
     left: 10%;
     display: flex;
