@@ -476,7 +476,7 @@ body{
                             }
                         .content{
                             margin-top: 40px;
-                            font-size: 24px;
+                            font-size: 25px;
                         }
                         button{
                             margin-top:50px;
