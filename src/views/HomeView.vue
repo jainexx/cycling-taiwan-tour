@@ -186,11 +186,11 @@ export default{
   }
 
   p {
-    padding-top: 3dvh;
+    padding-top: 2dvh;
     font-size: 10pt;
     letter-spacing: 2px;
     line-height: 25px;
-    padding-bottom: 2dvh;
+    padding-bottom: 1dvh;
   }
 
   .button {
@@ -205,7 +205,7 @@ export default{
     align-items: center;
     background-color: #39ab4b;
     cursor: pointer;
-    margin-top: 3dvh;
+    margin-top: 1dvh;
 
     &:hover{
       scale: 0.95;
