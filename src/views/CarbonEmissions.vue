@@ -2,6 +2,11 @@
 import breadCrum from "../components/breadCrum.vue";
 import TrafficButtons from "../components/Traffic.vue";
 export default {
+  data() {
+    return {
+      selectedTransportation: "",
+    };
+  },
   components: {
     breadCrum,
     TrafficButtons,
@@ -9,6 +14,7 @@ export default {
   methods: {
     showareatext(Transportation) {
       this.selectedTransportation = Transportation;
+      console.log(this.selectedTransportation);
     },
   },
 };
@@ -52,7 +58,7 @@ export default {
     <div class="longMap">
       <div class="Trapzoid1">
         <div class="square1">
-          <TrafficButtons @area-change="showareatext()" />
+          <TrafficButtons @area-change="this.showareatext" />
           <!-- <div class="tiny1">
             <button class="car">汽車</button>
           </div>
@@ -66,15 +72,20 @@ export default {
             <button class="THSR">高鐵</button>
           </div> -->
         </div>
-        <div v-if="selectedTransportation === '汽車'" class="square2">
+        <div v-if="this.selectedTransportation == '汽車'" class="square2">
           <p>1556455645</p>
         </div>
-        <!-- <div class="square3" v-if="selectedTransportation === '摩托車'">
+        <div class="square3" v-else>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ab.
+          </p>
+        </div>
+        <div class="square3" v-if="selectedTransportation === '摩托車'">
           <p>55645</p>
         </div>
         <div class="square4" v-if="selectedTransportation === '火車'">
           <p>100000</p>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

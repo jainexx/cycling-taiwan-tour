@@ -12,16 +12,17 @@ export default {
   },
   methods: {
     controlbuttonclick(button) {
-      this.$emit("area-change", button.text);
+      this.$emit("area-change", button);
     },
   },
+  emits: ["area-change"],
 };
 </script>
 <template>
   <button
     v-for="button in buttons"
     :key="button.id"
-    @click="controlbuttonclick(button)"
+    @click="controlbuttonclick(button.text)"
   >
     {{ button.text }}
   </button>
