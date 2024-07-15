@@ -42,13 +42,12 @@ export default{
         <h1>發現台灣的每個驚喜：環台騎行之旅</h1>
         <p>讓腳踏車帶你探索這座寶島的每一個驚喜，<br>感受只有親身體驗才能擁有的樂趣！<br>
         用雙輪丈量台灣，感受心靈的悸動，<br>這將是一段無可取代的難忘旅程。<br></p>
-        <br>
         <h1>該去哪裡呢？</h1>
         <p>台灣能去的地方五花八門，無論你是追求自然美景、歷史文化，<br>
             還是現代都市的繁華，都能在這裡找到屬於你的驚喜。<br>
             開啟你的多元台灣探索之旅吧！</p>
         <div class="button">前往我夢想的目的地</div>
-        <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="550" style="position: absolute;top: 50px;left: 150px;">
+        <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="500" style="position: absolute;top: 50px;left: 150px;">
 
         </div>
     </div>
@@ -170,7 +169,7 @@ export default{
 
   .text{
     position: absolute;
-    top: 8dvh;
+    top: 6dvh;
     left: 12dvw;
     display: flex;
     align-items: center;
@@ -224,14 +223,14 @@ export default{
   border-radius: 30px 30px 0 0px;
   margin-top: -30px;
   position: sticky;
-  top: 5dvh;
+  top: 4dvh;
   .textbox {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 45px;
+    padding-top: 35px;
     padding-left: 40%;
 
     h1 {
@@ -261,7 +260,7 @@ export default{
       align-items: center;
       background-color: #39ab4b;
       cursor: pointer;
-      margin-top: 1dvh;
+      margin-top: -1dvh;
 
       &:hover{
         scale: 0.95;
