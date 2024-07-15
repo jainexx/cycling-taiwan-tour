@@ -73,18 +73,21 @@ export default {
           </div> -->
         </div>
         <div v-if="this.selectedTransportation == '汽車'" class="square2">
-          <p>1556455645</p>
+          <p>碳排放合計</p>
+          <p>109.61kg CO2e</p>
         </div>
-        <div class="square3" v-else>
+        <!-- <div class="square3" v-else>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ab.
           </p>
-        </div>
+        </div> -->
         <div class="square3" v-if="selectedTransportation === '摩托車'">
-          <p>55645</p>
+          <p>碳排放合計</p>
+          <p>90.64kg CO2e</p>
         </div>
         <div class="square4" v-if="selectedTransportation === '火車'">
-          <p>100000</p>
+          <p>碳排放合計</p>
+          <p>51.47kg CO2e</p>
         </div>
       </div>
     </div>
