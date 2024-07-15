@@ -76,10 +76,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3%;
     .banner{
-        width: 1150px;
+        width: 1200px;
         height: 400px;
-        border: 1px solid black;
+        border: none;
     }
 
 }
