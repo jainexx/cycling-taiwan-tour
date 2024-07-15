@@ -68,7 +68,7 @@ export default {
             text-align: center;
             color: #39AB4B;
             .title{
-                font-size: 36px;
+                font-size: 30px;
             }
             .content{
                 margin-top: 40px;

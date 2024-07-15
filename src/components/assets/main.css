@@ -1,1 +1,7 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap");
+* {
+  font-family: "Chocolate Classical Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=main.css.map */
