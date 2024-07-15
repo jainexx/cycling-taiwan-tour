@@ -102,6 +102,9 @@ export default {
                 color: white;
                 font-size: 24px;
                 border:none;
+                position: absolute;
+                bottom: 10%;
+                left: 25%;
             }
         }
         img{

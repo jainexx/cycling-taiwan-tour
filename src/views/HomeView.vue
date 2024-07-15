@@ -14,10 +14,10 @@ export default{
             <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
             <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
             <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
-
+        </div>
         <div class="women">
             <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350dvw">
-        </div></div>
+        </div>
 
         <div class="topcontent">
             <p class="firstContent">從北到南,從東到西,</p>
@@ -97,7 +97,7 @@ export default{
   .women {
     img {
       position: absolute;
-      top: 30dvh;
+      top: 25dvh;
       left: 10dvw;
       // transform: translateX(50%);
       // transition: all 0.5s;
@@ -107,13 +107,13 @@ export default{
 
       @keyframes wom {
         from {
-          opacity: 100%;
+          opacity: 1;
           transform: translateX(0%);
           filter: blur(0px);
         }
 
         to {
-          opacity: 0%;
+          opacity: 0;
           transform: translateX(100%);
           filter: blur(5px);
         }
