@@ -52,7 +52,7 @@ export default{
     
 
     <div class="imgContainer">
-        <img src="./banner-food.svg" alt="">
+        <img src="../components/assets/banner-02-01.png" alt="">
     </div>
 
     <div class="container1">
@@ -333,8 +333,12 @@ body{
     }
 }
 .imgContainer{
-    height: 600px;
-    // width: 1280px;
+    height: 800px;
+    width: 100dvw;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 

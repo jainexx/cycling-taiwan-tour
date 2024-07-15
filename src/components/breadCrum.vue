@@ -44,6 +44,7 @@ export default {
         list-style: none;
         // font-size: font(1);
         margin-left: 20px;
+        align-items: center;
     }
     li{
         cursor: pointer;

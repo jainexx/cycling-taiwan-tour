@@ -3,7 +3,7 @@ export default{
     data(){
         return{
             buttons:[
-            { id: 'northareaBtn', text: '北部地區',backgroundColor:'#C6E058' },
+            { id: 'northareaBtn', text: '北部地區',backgroundColor:'#39AB4B' },
             { id: 'midareaBtn', text: '中部地區' ,backgroundColor:'#C6E058'},
             { id: 'southareaBtn', text: '南部地區',backgroundColor:'#C6E058' },
             { id: 'eastareaBtn', text: '東部地區',backgroundColor:'#C6E058' }
