@@ -39,6 +39,7 @@ export default {
 .breadCrum {
     border-bottom:2px solid #39AB4B;
     width: 100dvw;
+    height: 35px;
     ul{
         display: flex;
         list-style: none;
