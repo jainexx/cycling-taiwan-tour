@@ -1,8 +1,15 @@
 <script>
 import breadCrum from "../components/breadCrum.vue";
+import TrafficButtons from "../components/Traffic.vue";
 export default {
   components: {
     breadCrum,
+    TrafficButtons,
+  },
+  methods: {
+    showareatext(Transportation) {
+      this.selectedTransportation = Transportation;
+    },
   },
 };
 </script>
@@ -40,22 +47,34 @@ export default {
       <p>根據資料，台灣的交通碳排放主要來自於道路交通。</p>
       <p>每年<b>交通碳排放量</b>占台灣總碳排放量的顯著部分。</p>
       <p>以私家車和摩托車為主要交通工具,碳排放量高於使用公共交通的國家</p>
+      <p>環島一號線953.1km,採計環島1號線為主,作為各項交通工具的碳足跡。</p>
     </div>
     <div class="longMap">
       <div class="Trapzoid1">
         <div class="square1">
-          <div class="tiny1"></div>
-          <div class="tiny2"></div>
-          <div class="tiny3"></div>
-          <div class="tiny4"></div>
-          <div class="tiny5"></div>
+          <TrafficButtons @area-change="showareatext()" />
+          <!-- <div class="tiny1">
+            <button class="car">汽車</button>
+          </div>
+          <div class="tiny2">
+            <button class="motorcycle">機車</button>
+          </div>
+          <div class="tiny3">
+            <button class="train">火車</button>
+          </div>
+          <div class="tiny4">
+            <button class="THSR">高鐵</button>
+          </div> -->
         </div>
-        <div class="square2">
-          <div class="diminutive1"></div>
-          <div class="diminutive2"></div>
-          <div class="diminutive3"></div>
-          <div class="diminutive4"></div>
+        <div v-if="selectedTransportation === '汽車'" class="square2">
+          <p>1556455645</p>
         </div>
+        <!-- <div class="square3" v-if="selectedTransportation === '摩托車'">
+          <p>55645</p>
+        </div>
+        <div class="square4" v-if="selectedTransportation === '火車'">
+          <p>100000</p>
+        </div> -->
       </div>
     </div>
   </div>
@@ -78,13 +97,14 @@ body {
 }
 
 .container {
-  height: 400px;
+  height: 350px;
   weight: 1000px;
   display: flex;
   justify-content: center;
-  //   border-bottom: 2px solid rgb(0, 0, 0);
+  // border: 2px solid rgb(0, 0, 0);
   //   align-items: center;
   margin-top: 50px;
+  margin-left: 101px;
   .shape {
     height: 180px;
     width: 180px;
@@ -167,11 +187,12 @@ body {
   .Trapzoid1 {
     height: 400px;
     width: 1000px;
-    background-color: #d9d9d9;
+    background-color: #8efb76;
     border: 1px solid rgb(0, 0, 0);
     display: flex;
     margin: auto;
-    opacity: 0.2;
+    position: relative;
+    // opacity: 0.2;
 
     .square1 {
       height: 400px;
@@ -182,39 +203,11 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-
-      .tiny1 {
-        height: 50px;
-        width: 500px;
-        background-color: rgb(17, 254, 194);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .tiny2 {
-        height: 50px;
-        width: 500px;
-        background-color: rgb(17, 254, 194);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .tiny3 {
-        height: 50px;
-        width: 500px;
-        background-color: rgb(17, 254, 194);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .tiny4 {
-        height: 50px;
-        width: 500px;
-        background-color: rgb(17, 254, 194);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .tiny5 {
-        height: 50px;
-        width: 500px;
-        background-color: rgb(17, 254, 194);
-        // border: 2px solid rgb(0, 0, 0);
-      }
     }
-    .square2 {
+    .square2,
+    .square3,
+    .square4 {
+      z-index: 99;
       height: 400px;
       width: 500px;
       background-color: #c6e058;
@@ -223,6 +216,9 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      position: absolute;
+      right: 0%;
+      top: 0%;
       .diminutive1 {
         height: 70px;
         width: 500px;
