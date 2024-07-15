@@ -111,6 +111,9 @@ export default {
                     },
                     1000: {
                         items: 3
+                    },
+                    1500: {
+                        items: 3
                     }
                 }
             });
@@ -135,7 +138,7 @@ export default {
                     <img src="./assets/photo/TWB東三塔.jpg" alt="TWB東三塔">
                     <div class="cardBody">
                         <h4>2月 TWB 東三塔550</h4>
-                        <p>日期：2024年2月24日（星期六） ～ 2024年2月25日（星期日）</p>
+                        <p>日期：2024年2月24日（星期六） </p>
                         <p>活動路線：總爬升約5,000公尺;全程約550公里</p>
                     </div>
                 </div>
@@ -151,7 +154,7 @@ export default {
                     <img src="./assets/photo/環花東365.jpg" alt="環花東365">
                     <div class="cardBody">
                         <h4>4月 環花東365自行車挑戰</h4>
-                        <p>日期：2024年04月13日（星期六）～ 2024年04月14日（星期日）</p>
+                        <p>日期：2024年04月13日（星期六）</p>
                         <p>活動路線：總爬升約2,000公尺;全程約340公里</p>
                     </div>
                 </div>
@@ -227,6 +230,9 @@ export default {
 
 <style scoped lang="scss">
 .container {
+    width: 100%;
+    height: 100%;
+    
     .slider {
         margin-bottom: 20px;
         position: relative;
@@ -234,20 +240,18 @@ export default {
         :deep(.owl-item.active.center .slider-card) {
             transform: scale(1.15);
             opacity: 1;
+            &:hover .cardBody {
+                display: block;
+            }
         }
 
         .slider-card {
             background-color: #fff;
             margin: 50px 15px 90px 15px;
             border-radius: 5px;
-            box-shadow: 0 15px 45px -20px #ccc;
             transform: scale(0.9);
             opacity: 0.5;
             transition: all 0.3s;
-
-            &:hover .cardBody {
-                display: block;
-            }
 
             img {
                 border-radius: 5px 5px 0px 0px;
@@ -260,6 +264,7 @@ export default {
                 h4 {
                 font-size: 20px;
                 text-align: center;
+                font-weight: bold;
                 }
 
                 p {
@@ -274,8 +279,8 @@ export default {
 
 :deep(.owl-nav .owl-next) {
     position: absolute;
-    top: 250px;
-    right: 0;
+    top: 150px;
+    right: -50px;
     opacity: 1;
     font-size: 50px !important;
     z-index: 1;
@@ -284,8 +289,8 @@ export default {
 
 :deep(.owl-nav .owl-prev) {
     position: absolute;
-    top: 250px;
-    left: 0;
+    top: 150px;
+    left: -50px;
     opacity: 1;
     font-size: 50px !important;
     z-index: 1;
