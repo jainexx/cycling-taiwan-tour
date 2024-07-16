@@ -25,10 +25,7 @@ export default {
 
   <div class="container">
     <div class="shape">
-      <img
-        src="../components/assets/CarbonEmissions/163f5170a0fe62b70db2a913508a4aa1.png"
-        alt=""
-      />
+      <img src="../components/assets/CarbonEmissions/163f5170a0fe62b70db2a913508a4aa1.png" alt="" />
     </div>
     <div class="BigRectangle">
       <p class="title">碳足跡是甚麼?</p>
@@ -41,10 +38,7 @@ export default {
       <p>減少碳足跡有助於減緩氣候變化,保護地球環境。</p>
     </div>
     <div class="shape1">
-      <img
-        src="../components/assets/CarbonEmissions/88316ac878793b27f61688e36d4bc6fe.png"
-        alt=""
-      />
+      <img src="../components/assets/CarbonEmissions/88316ac878793b27f61688e36d4bc6fe.png" alt="" />
     </div>
   </div>
   <div class="BigTrapzoid">
@@ -104,6 +98,7 @@ export default {
   box-sizing: border-box;
   font-family: "Chocolate Classical Sans", sans-serif;
 }
+
 body {
   height: 100dvh;
   width: 100dvw;
@@ -119,6 +114,7 @@ body {
   //   align-items: center;
   margin-top: 50px;
   margin-left: 101px;
+
   .shape {
     height: 180px;
     width: 180px;
@@ -126,11 +122,13 @@ body {
     // border: 2px solid rgb(0, 0, 0);
     margin-top: 150px;
     margin-right: 30px;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   .BigRectangle {
     height: 300px;
     width: 1000px;
@@ -141,15 +139,18 @@ body {
     // align-items: end;
     // margin-bottom: 700px;
     text-align: center;
+
     .title {
       font-size: 36px;
       margin-bottom: 30px;
       color: #39ab4b;
     }
+
     p {
       font-size: 24px;
     }
   }
+
   .shape1 {
     height: 180px;
     width: 180px;
@@ -157,12 +158,14 @@ body {
     // border: 2px solid #000000;
     margin-top: 150px;
     margin-left: 30px;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
 }
+
 .BigTrapzoid {
   height: 1000px;
   width: 100dvw;
@@ -184,20 +187,24 @@ body {
     text-align: center;
     border-top-left-radius: 700px;
     border-top-right-radius: 700px;
+
     .contenTitle {
       color: white;
       margin-bottom: 20px;
     }
+
     p {
       font-size: 20px;
       text-align: center;
     }
   }
+
   .longMap {
     width: 1200px;
     height: 600px;
     margin: auto;
   }
+
   .Trapzoid1 {
     height: 400px;
     width: 1000px;
@@ -212,12 +219,36 @@ body {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      // border: 2px solid rgb(0, 0, 0);
+      border: 2px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+
     }
+
+    // .square2 {
+    //   height: 400px;
+    //   width: 500px;
+    //   border: 1px solid rgb(0, 0, 0);
+    //   text-align: center;
+    //   align-items: center;
+    //   flex-direction: column;
+    //   justify-content: space-evenly;
+    //   font-size: 25px;
+    // }
+
+    // .square3 {
+    //   height: 400px;
+    //   width: 500px;
+    //   border: 1px solid rgb(0, 0, 0);
+    //   text-align: center;
+    //   align-items: center;
+    //   flex-direction: column;
+    //   justify-content: space-evenly;
+    //   font-size: 25px;
+    // }
+
     .square2,
     .square3,
     .square4 {
@@ -225,38 +256,43 @@ body {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      // border: 2px solid rgb(0, 0, 0);
+      border: 2px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      position: absolute;
-      right: 0%;
-      top: 0%;
-      .diminutive1 {
-        height: 70px;
-        width: 500px;
-        background-color: rgb(254, 234, 17);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .diminutive2 {
-        height: 70px;
-        width: 500px;
-        background-color: rgb(254, 234, 17);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .diminutive3 {
-        height: 70px;
-        width: 500px;
-        background-color: rgb(254, 234, 17);
-        // border: 2px solid rgb(0, 0, 0);
-      }
-      .diminutive4 {
-        height: 70px;
-        width: 500px;
-        background-color: rgb(254, 234, 17);
-        // border: 2px solid rgb(0, 0, 0);
-      }
+      font-size: 25px;
+      // position: absolute;
+      // right: 0%;
+      // top: 0%;
+
+      // .diminutive1 {
+      //   height: 70px;
+      //   width: 500px;
+      //   background-color: rgb(254, 234, 17);
+      //   // border: 2px solid rgb(0, 0, 0);
+      // }
+
+      // .diminutive2 {
+      //   height: 70px;
+      //   width: 500px;
+      //   background-color: rgb(254, 234, 17);
+      //   // border: 2px solid rgb(0, 0, 0);
+      // }
+
+      // .diminutive3 {
+      //   height: 70px;
+      //   width: 500px;
+      //   background-color: rgb(254, 234, 17);
+      //   // border: 2px solid rgb(0, 0, 0);
+      // }
+
+      // .diminutive4 {
+      //   height: 70px;
+      //   width: 500px;
+      //   background-color: rgb(254, 234, 17);
+      //   // border: 2px solid rgb(0, 0, 0);
+      // }
     }
   }
 }
@@ -265,26 +301,31 @@ body {
   height: 304px;
   background: black;
   position: relative;
+
   img {
     position: absolute;
     bottom: 0;
     left: 1%;
   }
+
   .content {
     position: absolute;
     right: 0;
     bottom: 0;
     margin-bottom: 20px;
     margin-right: 30px;
+
     p {
       color: white;
     }
+
     .firstContent,
     .secondContent {
       display: flex;
       justify-content: end;
     }
   }
+
   .footerBotLine {
     position: absolute;
     bottom: 0;
