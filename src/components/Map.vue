@@ -19,17 +19,16 @@ export default {
             const map = new google.maps.Map(this.$refs.map, {
                 center: new google.maps.LatLng(25.0374865, 121.5647688),
                 zoom: 16,
+                mapId: "4504f8b37365c3d0",
                 mapTypeControl: false,
             });
-            
-            const place = 
 
             const autocomplete = new google.maps.places.Autocomplete(
                 this.$refs.autocompleteInput
             );
             autocomplete.addListener("place_changed", () => {
                 let selectedPlace = autocomplete.getPlace();
-                center = {
+                let center = {
                     lat: selectedPlace.geometry.location.lat(),
                     lng: selectedPlace.geometry.location.lng(),
                 };
@@ -94,7 +93,7 @@ export default {
                         placeholder="請輸入地址..."
                         ref="autocompleteInput"
                     />
-                    <button id="searchUbikeBtn">搜尋附近Ubike</button>
+                    <button ref="searchUbikeBtn" id="searchUbikeBtn">搜尋附近Ubike</button>
                 </div>
                 <div ref="map" id="mapApi"></div>
             </div>
