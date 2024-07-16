@@ -67,6 +67,7 @@ export default {
           </div> -->
         </div>
         <div v-if="this.selectedTransportation == '汽車'" class="square2">
+          <p>環島一號線距離953.1km</p>
           <p>碳排放合計</p>
           <p>109.61kg CO2e</p>
         </div>
@@ -76,10 +77,12 @@ export default {
           </p>
         </div> -->
         <div class="square3" v-if="selectedTransportation === '摩托車'">
+          <p>環島一號線距離953.1km</p>
           <p>碳排放合計</p>
           <p>90.64kg CO2e</p>
         </div>
         <div class="square4" v-if="selectedTransportation === '火車'">
+          <p>環島一號線距離953.1km</p>
           <p>碳排放合計</p>
           <p>51.47kg CO2e</p>
         </div>
@@ -208,22 +211,24 @@ body {
   .Trapzoid1 {
     height: 400px;
     width: 1000px;
-    background-color: #cd8360;
-    border: 1px solid rgb(0, 0, 0);
+    background-color: #c6e058;
+    // border: 1px solid rgb(0, 0, 0);
     display: flex;
     margin: auto;
     position: relative;
-    // opacity: 0.2;
 
     .square1 {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      border: 2px solid rgb(0, 0, 0);
+      // border: 2px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+      opacity: 0.8;
+
+
 
     }
 
@@ -256,12 +261,13 @@ body {
       height: 400px;
       width: 500px;
       background-color: #c6e058;
-      border: 2px solid rgb(0, 0, 0);
+      // border: 1px solid rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      font-size: 25px;
+      font-size: 40px;
+      opacity: 0.8;
       // position: absolute;
       // right: 0%;
       // top: 0%;

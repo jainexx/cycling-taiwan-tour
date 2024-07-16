@@ -25,14 +25,17 @@ export default {
 </template>
 <style>
 button {
-  width: 300px;
-  height: 100px;
-  font-size: 40px;
+  width: 100px;
+  height: 70px;
+  font-size: 30px;
   border-radius: 2dvh;
+  transition: 0.5s;
+  background-color: #c6e058;
+  opacity: 0.7;
+
 
   &:hover {
-    scale: 0.8;
+    scale: 0.9;
   }
-
 }
 </style>
