@@ -51,10 +51,10 @@ export default {
             this.mapAddress=''
             this.mapTitle=''
         },
-        showMap(address) {
+        showMap(address,title) {
             this.mapVisible = true
             this.mapTitle = title
-            console.log(this.mapTitle)
+            console.log(title)
             this.mapAddress = address
             
             console.log(this.mapAddress)
@@ -71,7 +71,7 @@ export default {
             <div class="intro">
                 <p class="title" >{{ item.title }}</p>
                 <p class="content">{{item.address}}</p>
-                <button type="button" @click="showMap(item.address)">前往地圖</button>
+                <button type="button" @click="showMap(item.address,item.title)">前往地圖</button>
                 
             </div>
             <img :src="item.image" alt=""  @click="widthAdjust(rowIndex,boxIndex)" :class="{active: item.isActive}">

@@ -1,14 +1,4 @@
-    <template>
-        <div class="background">
-
-        </div>
-        <div class="map-container">
-            <div ref="map" class="google-map"></div>
-            <button @click="closeMapEmit()" type="button">X</button>
-        </div>
-    </template>
-
-    <script>
+<script>
     export default {
         props: {
             address: {
@@ -82,6 +72,15 @@
             }
         }
     </script>
+<template>
+        <div class="background">
+        </div>
+        <div class="map-container">
+            <p>{{title}}</p>
+            <div ref="map" class="google-map"></div>
+            <button @click="closeMapEmit()" type="button">X</button>
+        </div>
+</template>
 
     <style scoped lang="scss">
     .background{
@@ -104,10 +103,17 @@
         height: 70%; 
         z-index: 99;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         background-color: rgba(198, 224, 88, 1);
         border-radius: 20px;
+        text-align: center;
+        p{
+            width: 100%;    
+            font-size: 24px;
+            margin: 0
+        }
         .google-map{
             width: 90%;
             height: 90%;
