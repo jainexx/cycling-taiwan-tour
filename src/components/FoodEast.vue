@@ -1,4 +1,5 @@
 <script>
+import mapPopup from "./mapPopup.vue"
 export default {
     data() {
     return {
@@ -21,22 +22,50 @@ export default {
             {image:"../public/food-img/東部/葉式海鮮.jpg",title:"葉式海鮮",address:"台東縣台東市強國街211號"},
             {image:"../public/food-img/東部/榕樹下米苔目.jpg",title:"榕樹下米苔目",address:"台東縣台東市博愛路362巷1-3號"}
             ]
-        ]
+        ],
+        mapVisible: false,
+        mapAddress: '',
+        mapTitle: '',
         }
     },
+    components:{
+            mapPopup,
+        },
+    methods:{
+
+        closeMap(){
+            this.mapVisible=false,
+            this.mapAddress=''
+            this.mapTitle=''
+        },
+        showMap(address) {
+            this.mapVisible = true
+            this.mapTitle = title
+            console.log(this.mapTitle)
+            this.mapAddress = address
+            
+            console.log(this.mapAddress)
+            console.log(this.mapTitle)
+    }
+
+}
 }
 </script>
 <template>
-    <div class="foodRow" v-for="Row in foodRowEast" >
-        <div class="foodBox" v-for="item in Row">
+    <div class="foodRow" v-for="(Row,rowIndex) in foodRowEast" :key="rowIndex" >
+        <div class="foodBox" v-for="(item,boxIndex) in Row" :key="boxIndex" >
             <div class="intro">
                 <p class="title" >{{ item.title }}</p>
                 <p class="content">{{item.address}}</p>
-                <button type="button">前往地圖</button>
+                <button type="button" @click="showMap(item.address)">前往地圖</button>
+                
             </div>
-            <img :src="item.image" alt="">
+            <img :src="item.image" alt=""  @click="widthAdjust(rowIndex,boxIndex)" :class="{active: item.isActive}">
         </div>
     </div>
+    <!-- <mapPopup v-if="this.mapVisible" :address="mapAddress" /> -->
+    <mapPopup v-if="mapVisible" :address="mapAddress" :mapVisible = "mapVisible" :title="mapTitle" @close="closeMap()"/>
+        
 </template>
 
 

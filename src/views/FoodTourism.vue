@@ -43,14 +43,10 @@ export default{
         },
     }
 }
-
-
 </script>
-
 <template>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225.76326155790832!2d121.7428295!3d25.1285163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4e158be43c41%3A0xf567e0b145940e00!2z6J6D6J-557654oCn5rK56aOvKOWQs-iomCDnrKw16Jmf5pSk77yJ!5e0!3m2!1szh-TW!2stw!4v1721092195501!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
     <breadCrum />
-    
-
     <div class="imgContainer">
         <img src="../components/assets/banner-02-01.png" alt="">
     </div>
@@ -81,192 +77,25 @@ export default{
             
             <div v-if="selectedArea === '北部地區'" class="northfoodFrame" id="northfoodFrame">
                 <FoodNorth />
-
-                
             </div>
                 
             <div v-if="selectedArea === '中部地區'"class="midfoodFrame" id="midfoodFrame">
                 <FoodMid />
-                <!-- <div class="Line" id="line"> 
-                    <div class="foodBox" id="foodBox">
-                        <div class="intro" id="info">
-                            <p class="title">小王煮瓜</p>
-                            <p class="content">台北市萬華區華西街17之4號攤位153號</p>
-                            <button type="button">前往地圖</button>
-                        </div>
-                        <img src="../components/assets/food-img/中部/三灣鵝肉.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/大元餅行.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/媽祖埔豆腐張.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/林記古早味麻薏湯.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/楊媽媽豬籠粄客家米食.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/游記扣仔嗲.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/源記粉粿冰.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/王記菜頭粿.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/蓮心雞腳凍.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/豆子芋園.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/中部/阿三肉圓.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox"><div class="info" id="info"></div>
-                    <img src="../components/assets/food-img/中部/阿斗伯冷凍芋.jpg" alt=""></div>
-                </div>  -->
+                
             </div>
             <div v-if="selectedArea === '南部地區'" class="southfoodFrame" id="southfoodFrame">
                 <FoodSouth />
-                <!-- <div class="Line" id="line">
-                    <div class="foodBox">
-                        <div class="intro" id="info">
-                            <p class="title">小王煮瓜</p>
-                            <p class="content">台北市萬華區華西街17之4號攤位153號</p>
-                            <button type="button">前往地圖</button>
-                        </div>
-                        <img src="../components/assets/food-img/南部/六千牛肉湯.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/劉家汕頭麵.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/劉里長雞肉飯.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/北門砂鍋魚頭.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/古早味素食麻糬嬤.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/楊寶寶.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/吉林海產粥.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/松記羊肉.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/林家豬腳.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/矮仔成蝦仁飯.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/邵陽燒餅.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/南部/黃記涼麵涼圓.jpg" alt="">
-                    </div>
-                </div> -->
+                
             </div>
             <div v-if="selectedArea === '東部地區'"class="eastfoodFrame" id="eastfoodFrame">
                 <FoodEast />
-                <!-- <div class="Line" id="line">
-                    <div class="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/一耕食堂.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/初。幸福現烤甜甜圈.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/來點卡路里早午餐.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/台澢號.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/單一純賣雞湯小卷米粉.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/大禹街龍鳳腿.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/明禮路蔥油餅.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/東池池上便當.jpg" alt="">
-                    </div>
-                </div>
-                <div class="Line" id="line">
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/榕樹下米苔目.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/正大漢方御膳食鋪.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/法式棺材板.jpg" alt="">
-                    </div>
-                    <div class="foodBox" id="foodBox">
-                        <div class="info" id="info"></div>
-                        <img src="../components/assets/food-img/東部/葉式海鮮.jpg" alt="">
-                    </div>
-                </div> -->
+                
             </div>
 
         </div>
 
     </div>
-
+   
 </template>
 
 <style scoped lang="scss">
@@ -541,5 +370,6 @@ body{
         width: 100%;
     }
 }
-
 </style>
+
+

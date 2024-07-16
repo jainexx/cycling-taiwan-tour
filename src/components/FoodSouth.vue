@@ -1,42 +1,70 @@
 <script>
+import mapPopup from "./mapPopup.vue"
 export default {
     data() {
-    return {
-        foodRowSouth:[
-            [
-            {image:"../public/food-img/南部/六千牛肉湯.jpg" ,title:"六千牛肉湯",address:"台南市中西區海安路一段63號"},
-            {image:"../public/food-img/南部/北門砂鍋魚頭.jpg",title:"北門砂鍋魚頭",address:"嘉義市東區忠孝路284-1號"},
-            {image:"../public/food-img/南部/古早味素食麻糬嬤.jpg",title:"古早味素食麻糬嬤",address:"屏東縣屏東市民權路43-9號"},
-            {image:"../public/food-img/南部/吉林海產粥.jpg",title:"吉林海產粥",address: "高雄市大樹區竹寮路149號"}
+        return {
+            foodRowSouth:[
+                [
+                {image:"../public/food-img/南部/六千牛肉湯.jpg" ,title:"六千牛肉湯",address:"台南市中西區海安路一段63號"},
+                {image:"../public/food-img/南部/北門砂鍋魚頭.jpg",title:"北門砂鍋魚頭",address:"嘉義市東區忠孝路284-1號"},
+                {image:"../public/food-img/南部/古早味素食麻糬嬤.jpg",title:"古早味素食麻糬嬤",address:"屏東縣屏東市民權路43-9號"},
+                {image:"../public/food-img/南部/吉林海產粥.jpg",title:"吉林海產粥",address: "高雄市大樹區竹寮路149號"}
+                ],
+                [
+                {image:"../public/food-img/南部/松記羊肉.jpg" ,title:"松記羊肉",address:"高雄市左營區海平路100巷31-1號"},
+                {image:"../public/food-img/南部/林家豬腳.jpg",title:"林家豬腳",address:"屏東縣萬巒鄉民和路1-4號"},
+                {image:"../public/food-img/南部/邵陽燒餅.jpg",title:"邵陽燒餅",address:"高雄市茄萣區濱海路一段558號"},
+                {image:"../public/food-img/南部/黃記涼麵涼圓.jpg" ,title:"黃記涼麵涼圓",address:"嘉義市東區興中街6號"}
+                ],
+                [
+                {image:"../public/food-img/南部/楊寶寶.jpg",title:"楊寶寶",address:"高雄市楠梓區朝明路106號"},
+                {image:"../public/food-img/南部/矮仔成蝦仁飯.jpg",title:"矮仔成蝦仁飯",address: "台南市中西區海安路一段66號"},
+                {image:"../public/food-img/南部/劉里長雞肉飯.jpg",title:"劉里長雞肉飯",address:"嘉義市東區公明路197號"},
+                {image:"../public/food-img/南部/劉家汕頭麵.jpg",title:"劉家汕頭麵",address:"台南市中西區民權路三段184號之1號"}
+                ]
             ],
-            [
-            {image:"../public/food-img/南部/松記羊肉.jpg" ,title:"松記羊肉",address:"高雄市左營區海平路100巷31-1號"},
-            {image:"../public/food-img/南部/林家豬腳.jpg",title:"林家豬腳",address:"屏東縣萬巒鄉民和路1-4號"},
-            {image:"../public/food-img/南部/邵陽燒餅.jpg",title:"邵陽燒餅",address:"高雄市茄萣區濱海路一段558號"},
-            {image:"../public/food-img/南部/黃記涼麵涼圓.jpg" ,title:"黃記涼麵涼圓",address:"嘉義市東區興中街6號"}
-            ],
-            [
-            {image:"../public/food-img/南部/楊寶寶.jpg",title:"楊寶寶",address:"高雄市楠梓區朝明路106號"},
-            {image:"../public/food-img/南部/矮仔成蝦仁飯.jpg",title:"矮仔成蝦仁飯",address: "台南市中西區海安路一段66號"},
-            {image:"../public/food-img/南部/劉里長雞肉飯.jpg",title:"劉里長雞肉飯",address:"嘉義市東區公明路197號"},
-            {image:"../public/food-img/南部/劉家汕頭麵.jpg",title:"劉家汕頭麵",address:"台南市中西區民權路三段184號之1號"}
-            ]
-        ]
-        }
+            mapVisible: false,
+            mapAddress: '',
+            mapTitle: '',
+            }
+    },
+    components:{
+            mapPopup,
+        },
+    methods:{
+
+        closeMap(){
+            this.mapVisible=false,
+            this.mapAddress=''
+            this.mapTitle=''
+        },
+        showMap(address) {
+            this.mapVisible = true
+            this.mapTitle = title
+            console.log(this.mapTitle)
+            this.mapAddress = address
+            
+            console.log(this.mapAddress)
+            console.log(this.mapTitle)
     }
+
+}
 }
 </script>
 <template>
-    <div class="foodRow" v-for="Row in foodRowSouth" >
-        <div class="foodBox" v-for="item in Row">
+    <div class="foodRow" v-for="(Row,rowIndex) in foodRowSouth" :key="rowIndex" >
+        <div class="foodBox" v-for="(item,boxIndex) in Row" :key="boxIndex" >
             <div class="intro">
                 <p class="title" >{{ item.title }}</p>
                 <p class="content">{{item.address}}</p>
-                <button type="button">前往地圖</button>
+                <button type="button" @click="showMap(item.address)">前往地圖</button>
+                
             </div>
-            <img :src="item.image" alt="">
+            <img :src="item.image" alt=""  @click="widthAdjust(rowIndex,boxIndex)" :class="{active: item.isActive}">
         </div>
     </div>
+    <!-- <mapPopup v-if="this.mapVisible" :address="mapAddress" /> -->
+    <mapPopup v-if="mapVisible" :address="mapAddress" :mapVisible = "mapVisible" :title="mapTitle" @close="closeMap()"/>
         
 </template>
 
@@ -99,6 +127,9 @@ export default {
                 opacity: 1;
                 z-index: 99;
             }
+        }
+        &.active{
+            width: 100%;
         }
     }
 }
