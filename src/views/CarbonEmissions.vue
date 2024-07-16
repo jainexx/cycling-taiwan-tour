@@ -208,7 +208,7 @@ body {
   .Trapzoid1 {
     height: 400px;
     width: 1000px;
-    background-color: #8efb76;
+    background-color: #cd8360;
     border: 1px solid rgb(0, 0, 0);
     display: flex;
     margin: auto;

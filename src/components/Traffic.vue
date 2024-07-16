@@ -19,12 +19,20 @@ export default {
 };
 </script>
 <template>
-  <button
-    v-for="button in buttons"
-    :key="button.id"
-    @click="controlbuttonclick(button.text)"
-  >
+  <button v-for="button in buttons" :key="button.id" @click="controlbuttonclick(button.text)">
     {{ button.text }}
   </button>
 </template>
-<style></style>
+<style>
+button {
+  width: 300px;
+  height: 100px;
+  font-size: 40px;
+  border-radius: 2dvh;
+
+  &:hover {
+    scale: 0.8;
+  }
+
+}
+</style>
