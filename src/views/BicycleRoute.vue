@@ -19,7 +19,6 @@ export default {
         <img src="../components/assets/BicycleRouteImg/banner-01.svg" alt="" width="100%">
     </div>
 
-
     <div class="map">
         <Map />
     </div>

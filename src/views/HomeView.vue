@@ -33,7 +33,7 @@ export default{
         <p>沒有腳踏車嗎？不用擔心！<br>我們已經為你整理好了所有YouBike的站點位置，<br>
             隨時隨地都能借車還車，讓你的環台之旅更加便捷輕鬆。</p>
             <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
-            <div class="button">馬上開始旅程！</div>
+            <RouterLink class="button" to="/BicycleRoute" style="text-decoration: none;">馬上開始旅程！</RouterLink>
             <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850dvw" style="position: absolute;top: -40px;left: 440px;"></div>
     </div>
 
@@ -46,7 +46,7 @@ export default{
         <p>台灣能去的地方五花八門，無論你是追求自然美景、歷史文化，<br>
             還是現代都市的繁華，都能在這裡找到屬於你的驚喜。<br>
             開啟你的多元台灣探索之旅吧！</p>
-        <div class="button">前往我夢想的目的地</div>
+        <RouterLink class="button" to="/FoodTourism" style="text-decoration: none;">前往我夢想的目的地</RouterLink>
         <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="500" style="position: absolute;top: 50px;left: 150px;">
 
         </div>
@@ -60,7 +60,7 @@ export default{
             還能提高個人的身體素質，鍛鍊心肺功能，增強體力。</h1>
             <p>環台是一個需要毅力和體力的挑戰，通過騎行達成這個目標，<br>能給自己帶來極大的成就感，激勵你在生活中面對其他挑戰。<br>
                 選擇腳踏車環台，不僅是一種出行方式，更是一種生活態度。<br>讓我們一起騎上腳踏車，開啟一段難忘的環台之旅吧！</p>
-        <div class="button">為什麼要減少排放量？</div></div>
+        <RouterLink class="button" to="/CarbonEmissions" style="text-decoration: none;">為什麼要減少排放量？</RouterLink></div>
 </div>
 
 </template>
@@ -97,7 +97,7 @@ export default{
   .women {
     img {
       position: absolute;
-      top: 25dvh;
+      top: 30dvh;
       left: 10dvw;
       // transform: translateX(50%);
       // transition: all 0.5s;
