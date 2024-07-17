@@ -3,6 +3,8 @@ export default {
     data() {
         return {
             isRoundIslandVisible: true,
+            selectedPlace: {},
+
         };
     },
     mounted() {
@@ -27,10 +29,10 @@ export default {
                 this.$refs.autocompleteInput
             );
             autocomplete.addListener("place_changed", () => {
-                let selectedPlace = autocomplete.getPlace();
+                this.selectedPlace = autocomplete.getPlace();
                 let center = {
-                    lat: selectedPlace.geometry.location.lat(),
-                    lng: selectedPlace.geometry.location.lng(),
+                    lat: this.selectedPlace.geometry.location.lat(),
+                    lng: this.selectedPlace.geometry.location.lng(),
                 };
                 map.setCenter(center);
 
@@ -42,15 +44,65 @@ export default {
                 const infowindow = new google.maps.InfoWindow({
                     content: `
             <div>
-                <h3>${selectedPlace.name}</h3>
-                <p>地址: ${selectedPlace.formatted_address}</p>
-                <p>經緯度: ${selectedPlace.geometry.location}</p>
+                <h6>${this.selectedPlace.name}</h6>
+                <p>地址: ${this.selectedPlace.formatted_address}</p>
+                <p>經緯度: ${this.selectedPlace.geometry.location}</p>
             </div>`,
                 });
                 infowindow.open(map, marker);
             });
+
+            const searchUbikeBtn = document.querySelector("#searchUbikeBtn");
+            searchUbikeBtn.addEventListener('click', ()=>{
+                const service = new google.maps.places.PlacesService(map);
+                const request = {
+                    location: this.selectedPlace.geometry.location,
+                    radius: "400",
+                    keyword: "YouBike",
+                }
+    
+                service.nearbySearch(request, function (results, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        results.forEach((place) => {
+                            const placeId = place.place_id;
+    
+                            const psyduckImg = document.createElement("img");
+                            psyduckImg.src =
+                                "src/components/assets/BicycleRouteImg/Psyduck-Pokemon-PNG.png";
+                            psyduckImg.style.width = "30px";
+                            psyduckImg.style.height = "40px";
+
+                            const psyduckMarker =
+                                new google.maps.marker.AdvancedMarkerElement({
+                                    position: place.geometry.location,
+                                    map: map,
+                                    content: psyduckImg,
+                                });
+    
+                            const infowindow = new google.maps.InfoWindow({
+                                content: `
+                        <div>
+                            <h6>${place.name}</h6>
+                            <p>經緯度: ${place.geometry.location}</p>
+                            <a href="https://www.google.com/maps/place/?q=place_id:${placeId}" target="_blank">前往Google Maps查看</a>
+                        </div>`,
+                            });
+    
+                            psyduckMarker.addListener("click", () => {
+                                infowindow.open({
+                                    anchor: psyduckMarker,
+                                    map,
+                                });
+                            });
+                        });
+                    } else {
+                        alert("找不到附近的 YouBike 站點");
+                    }
+                });
+            })
             
         },
+        
     },
 };
 </script>
@@ -93,7 +145,7 @@ export default {
                         placeholder="請輸入地址..."
                         ref="autocompleteInput"
                     />
-                    <button ref="searchUbikeBtn" id="searchUbikeBtn">搜尋附近Ubike</button>
+                    <button id="searchUbikeBtn">搜尋附近Ubike</button>
                 </div>
                 <div ref="map" id="mapApi"></div>
             </div>

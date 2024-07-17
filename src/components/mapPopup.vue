@@ -36,7 +36,6 @@
             },
             
             initMap() {
- 
                 const geocoder = new google.maps.Geocoder();
                 const mapOptions = {
                 zoom: 20,
