@@ -13,13 +13,13 @@ export default{
 
     <div class="topImage">
         <div class="threeImg">
-            <img src="../components/assets/HomePageImg/topbanner01.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner02.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner03.png" alt=""width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner01.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner02.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner03.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
         </div>
 
         <div class="women">
-            <img src="../components/assets/HomePageImg/ubike-woman.svg" alt=""width="350dvw">
+            <img src="../components/assets/HomePageImg/ubike-woman.svg" width="350dvw">
         </div>
 
         <div class="topcontent">
@@ -32,12 +32,15 @@ export default{
     
     <div class="bicycleLineBox">
         <div class="text">
-        <h1>開啟你的環台之旅：我們幫你準備好了！</h1>
-        <p>沒有腳踏車嗎？不用擔心！<br>我們已經為你整理好了所有YouBike的站點位置，<br>
-            隨時隨地都能借車還車，讓你的環台之旅更加便捷輕鬆。</p>
-            <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
-            <RouterLink class="button" to="/BicycleRoute" style="text-decoration: none;">馬上開始旅程！</RouterLink>
-            <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850dvw" style="position: absolute;top: -40px;left: 440px;"></div>
+          <h1>開啟你的環台之旅：我們幫你準備好了！</h1>
+          <p>沒有腳踏車嗎？不用擔心！
+            <br>我們已經為你整理好了所有YouBike的站點位置，
+            <br>隨時隨地都能借車還車，讓你的環台之旅更加便捷輕鬆。
+          </p>
+          <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
+          <RouterLink class="button" to="/BicycleRoute" style="text-decoration: none;">馬上開始旅程！</RouterLink>
+          <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850dvw" style="position: absolute;top: -40px;left: 440px;">
+        </div>
     </div>
 
     <div class="foodBox">
