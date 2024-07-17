@@ -42,21 +42,21 @@ export default{
     </div>
 
     <div class="foodBox">
-        <div class="textbox">
-          <h1>發現台灣的每個驚喜：環台騎行之旅</h1>
-          <p>讓腳踏車帶你探索這座寶島的每一個驚喜，
-            <br>感受只有親身體驗才能擁有的樂趣！
-            <br>用雙輪丈量台灣，感受心靈的悸動，
-            <br>這將是一段無可取代的難忘旅程。
-          </p>
-          <h1>該去哪裡呢？</h1>
-          <p>台灣能去的地方五花八門，無論你是追求自然美景、歷史文化，
-            <br>還是現代都市的繁華，都能在這裡找到屬於你的驚喜。
-            <br>開啟你的多元台灣探索之旅吧！
-          </p>
-          <RouterLink class="button" to="/FoodTourism" style="text-decoration: none;">前往我夢想的目的地</RouterLink>
+      <img class="homePageImg" src="../components/assets/HomePageImg/tw-01.png">
+      <div class="textbox">
+        <h1>發現台灣的每個驚喜：環台騎行之旅</h1>
+        <p>讓腳踏車帶你探索這座寶島的每一個驚喜，
+          <br>感受只有親身體驗才能擁有的樂趣！
+          <br>用雙輪丈量台灣，感受心靈的悸動，
+          <br>這將是一段無可取代的難忘旅程。
+        </p>
+        <h1>該去哪裡呢？</h1>
+        <p>台灣能去的地方五花八門，無論你是追求自然美景、歷史文化，
+          <br>還是現代都市的繁華，都能在這裡找到屬於你的驚喜。
+          <br>開啟你的多元台灣探索之旅吧！
+        </p>
+        <RouterLink class="button" to="/FoodTourism" style="text-decoration: none;">前往我夢想的目的地</RouterLink>
         </div>
-        <img class="homePageImg" src="../components/assets/HomePageImg/tw-01.png">
     </div>
 
     <div class="carbonBox">
@@ -180,11 +180,11 @@ export default{
   margin-top: -5dvh;
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   .text{
-    position: absolute;
-    top: 12dvh;
-    left: 12dvw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -228,11 +228,8 @@ export default{
   }
 
   .bicycleLine {
-    width: 55dvw;
+    width: 50dvw;
     height: 40dvh;
-    position: absolute;
-    top: 10dvh;
-    left: 45dvw;
   }
 }
 
@@ -244,11 +241,11 @@ export default{
   margin-top: -5dvh;
   position: sticky;
   top: 5dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   .textbox {
-    position: absolute;
-    top: 4dvh;
-    right: 12dvw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -294,9 +291,6 @@ export default{
   .homePageImg {
     width: 35dvw;
     height: 40dvh;
-    position: absolute;
-    top: 7dvh;
-    left: 10dvw;
   }
 }
 
@@ -307,7 +301,7 @@ export default{
   border-radius: 30px 30px 0 0px;
   margin-top: -5dvh;
   position: sticky;
-  top: 20dvh;
+  top: 30dvh;
   display: flex;
   justify-content: center;
   align-items: center;
