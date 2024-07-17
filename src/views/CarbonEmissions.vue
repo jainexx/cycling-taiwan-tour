@@ -4,7 +4,7 @@ import TrafficButtons from "../components/Traffic.vue";
 export default {
   data() {
     return {
-      selectedTransportation: "",
+      selectedTransportation: "汽車",
     };
   },
   components: {
@@ -41,19 +41,23 @@ export default {
       <img src="../components/assets/CarbonEmissions/88316ac878793b27f61688e36d4bc6fe.png" alt="" />
     </div>
   </div>
-  <div class="BigTrapzoid">
-    <div class="Trapzoid">
-      <h1 class="contenTitle">了解您的碳足跡﹐從今天開始改變</h1>
-      <p>根據資料，台灣的交通碳排放主要來自於道路交通。</p>
-      <p>每年<b>交通碳排放量</b>占台灣總碳排放量的顯著部分。</p>
-      <p>以私家車和摩托車為主要交通工具,碳排放量高於使用公共交通的國家</p>
-      <p>環島一號線953.1km,採計環島1號線為主,作為各項交通工具的碳足跡。</p>
-    </div>
-    <div class="longMap">
-      <div class="Trapzoid1">
-        <div class="square1">
-          <TrafficButtons @area-change="this.showareatext" />
-          <!-- <div class="tiny1">
+  <div class="greenBox">
+    <img src="../components/assets/Background_工作區域 1.svg" alt="">
+    <div class="BigTrapzoid">
+      <div class="Trapzoid">
+        <h1 class="contenTitle">了解您的碳足跡﹐從今天開始改變</h1>
+        <p>根據資料，台灣的交通碳排放主要來自於道路交通。</p>
+        <p>每年<b>交通碳排放量</b>占台灣總碳排放量的顯著部分。</p>
+        <p>以私家車和摩托車為主要交通工具,碳排放量高於使用公共交通的國家</p>
+        <p>環島一號線953.1km,採計環島1號線為主,作為各項交通工具的碳足跡。</p>
+      </div>
+      <div class="longMap">
+        <div class="Trapzoid1">
+          <div class="square1">
+
+            <i class="fa-solid fa-car"></i>
+            <TrafficButtons @area-change="this.showareatext" />
+            <!-- <div class="tiny1">
             <button class="car">汽車</button>
           </div>
           <div class="tiny2">
@@ -65,26 +69,36 @@ export default {
           <div class="tiny4">
             <button class="THSR">高鐵</button>
           </div> -->
-        </div>
-        <div v-if="this.selectedTransportation == '汽車'" class="square2">
-          <p>環島一號線距離953.1km</p>
-          <p>碳排放合計</p>
-          <p>109.61kg CO2e</p>
-        </div>
-        <!-- <div class="square3" v-else>
+          </div>
+          <div v-if="this.selectedTransportation == '汽車'" class="square2">
+
+            <p>環島一號線距離</p>
+            <p class="number"><b>953.1km</b></p>
+            <p>碳排放合計</p>
+            <p class="co2"><b>109.61kg CO2e</b></p>
+          </div>
+          <!-- <div class="square3" v-else>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ab.
           </p>
         </div> -->
-        <div class="square3" v-if="selectedTransportation === '摩托車'">
-          <p>環島一號線距離953.1km</p>
+          <div class="square3" v-if="selectedTransportation === '摩托車'">
+            <p>環島一號線距離</p>
+            <p class="number"><b>953.1km</b></p>
+            <p>碳排放合計</p>
+            <p class="co2"><b>90.64kg CO2e</b></p>
+          </div>
+          <!-- <p>環島一號線距離953.1km</p>
           <p>碳排放合計</p>
-          <p>90.64kg CO2e</p>
-        </div>
-        <div class="square4" v-if="selectedTransportation === '火車'">
-          <p>環島一號線距離953.1km</p>
-          <p>碳排放合計</p>
-          <p>51.47kg CO2e</p>
+          <p>90.64kg CO2e</p> -->
+
+          <div class="square4" v-if="selectedTransportation === '火車'">
+            <p>環島一號線距離</p>
+            <p class="number"><b>953.1km</b></p>
+            <p>碳排放合計</p>
+            <p class="co2"><b>51.47kg CO2e</b></p>
+
+          </div>
         </div>
       </div>
     </div>
@@ -105,7 +119,7 @@ export default {
 body {
   height: 100dvh;
   width: 100dvw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .container {
@@ -115,8 +129,9 @@ body {
   justify-content: center;
   // border: 2px solid rgb(0, 0, 0);
   //   align-items: center;
-  margin-top: 50px;
-  margin-left: 101px;
+  // margin-top: 50px;
+  // margin-left: 101px;
+  margin: auto;
 
   .shape {
     height: 180px;
@@ -142,6 +157,7 @@ body {
     // align-items: end;
     // margin-bottom: 700px;
     text-align: center;
+    margin-top: 30px;
 
     .title {
       font-size: 36px;
@@ -169,64 +185,96 @@ body {
   }
 }
 
-.BigTrapzoid {
-  height: 1000px;
-  width: 100dvw;
-  background-color: #c6e058;
-  //   border: 2px solid rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
-  //   overflow: hidden;
+.greenBox {
+  position: relative;
+  height: 750px;
 
-  .Trapzoid {
-    height: 200px;
-    width: 1000px;
-    background-color: #c6e058;
-    margin-top: 60px;
-    text-align: center;
-    border-top-left-radius: 700px;
-    border-top-right-radius: 700px;
-
-    .contenTitle {
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      text-align: center;
-    }
+  img {
+    position: absolute;
+    top: -100px;
   }
 
-  .longMap {
-    width: 1200px;
+  .BigTrapzoid {
     height: 600px;
-    margin: auto;
-  }
-
-  .Trapzoid1 {
-    height: 400px;
-    width: 1000px;
+    width: 100%;
     background-color: #c6e058;
-    // border: 1px solid rgb(0, 0, 0);
+    //   border: 2px solid rgb(0, 0, 0);
     display: flex;
-    margin: auto;
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border-top-left-radius: 600px;
+    // border-top-right-radius: 600px;
+    // margin-left: -100px;
+    // overflow-x: hidden;
+    position: absolute;
+    top: 300px;
 
-    .square1 {
-      height: 400px;
-      width: 500px;
-      background-color: #c6e058;
-      // border: 2px solid rgb(0, 0, 0);
+    .Trapzoid {
+      height: 200px;
+      width: 1000px;
+      // background-color: #ffffff;
+      // margin-top: 60px;
+      text-align: center;
+      border-top-left-radius: 700px;
+      border-top-right-radius: 700px;
+      position: absolute;
+      top: -300px;
+      z-index: 99;
+
+      .contenTitle {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+
+    .longMap {
+      width: 1200px;
+      height: 600px;
+      margin: auto;
+    }
+
+    .Trapzoid1 {
+      height: 450px;
+      width: 1100px;
+      background-color: #cfdd98;
+      // border: 1px solid rgb(0, 0, 0);
+      border-radius: 20px;
       display: flex;
-      flex-direction: column;
+      margin: auto;
+      position: absolute;
+      justify-content: center;
       align-items: center;
-      justify-content: space-evenly;
-      opacity: 0.8;
+      top: 160px;
+      transform: translate(-50%, -50%);
+      left: 50%;
+
+      .square1 {
+        height: 400px;
+        width: 30%;
+        background-color: #39ab4b;
+        // border: 2px solid rgb(0, 0, 0);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        opacity: 0.8;
+
+
+        .fa-solid {
+          position: absolute;
+          color: #39ab4b;
+          ont-size: 50px;
+          z-index: 99;
+        }
+      }
 
 
 
@@ -259,15 +307,29 @@ body {
     .square4 {
       z-index: 99;
       height: 400px;
-      width: 500px;
-      background-color: #c6e058;
-      // border: 1px solid rgb(0, 0, 0);
+      width: 60%;
+      background-color: #ffffff;
+      // border: 2px solid rgb(0, 0, 0);
+      opacity: 0.8;
+      color: #39ab4b;
+      // border-radius: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      font-size: 40px;
-      opacity: 0.8;
+      font-size: 30px;
+      opacity: 0.7;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      .number {
+        font-size: 55px;
+      }
+
+      .co2 {
+        font-size: 70px;
+      }
+
       // position: absolute;
       // right: 0%;
       // top: 0%;
@@ -302,6 +364,7 @@ body {
     }
   }
 }
+
 
 .footer {
   height: 304px;
