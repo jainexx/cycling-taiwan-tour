@@ -69,7 +69,7 @@ export default{
 <style scoped lang="scss">
 .topImage {
   width: 100dvw;
-  height: 60dvh;
+  height: 70dvh;
   background: linear-gradient(180deg, rgb(55, 170, 72), rgb(57, 171, 75));
 
   .threeImg {
