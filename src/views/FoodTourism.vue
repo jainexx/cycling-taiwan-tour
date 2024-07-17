@@ -164,8 +164,12 @@ body{
 .imgContainer{
     height: 800px;
     width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     img{
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
 }
@@ -302,6 +306,7 @@ body{
                         color: #39AB4B;
                         .title{
                             font-size: 36px;
+                            padding: 5%;
                             }
                         .content{
                             margin-top: 40px;
