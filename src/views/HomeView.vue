@@ -308,11 +308,11 @@ export default{
   margin-top: -5dvh;
   position: sticky;
   top: 20dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .textBox {
-    position: absolute;
-    top: 10dvh;
-    right: 28dvw;
     display: flex;
     justify-content: center;
     flex-direction: column;
