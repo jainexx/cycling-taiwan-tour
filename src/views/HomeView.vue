@@ -297,6 +297,7 @@ export default {
   height: 55dvh;
   background-color: #d5d5d5;
   border-radius: 30px 30px 0 0px;
+  margin-top: -5dvh;
   position: sticky;
   top: 30dvh;
   display: flex;
