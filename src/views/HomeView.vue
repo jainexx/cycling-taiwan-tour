@@ -55,8 +55,8 @@ export default{
             <br>開啟你的多元台灣探索之旅吧！
           </p>
           <RouterLink class="button" to="/FoodTourism" style="text-decoration: none;">前往我夢想的目的地</RouterLink>
-          <img src="../components/assets/HomePageImg/tw-01.png" alt="" width="500" style="position: absolute;top: 50px;left: 150px;">
         </div>
+        <img class="homePageImg" src="../components/assets/HomePageImg/tw-01.png">
     </div>
 
     <div class="carbonBox">
@@ -207,10 +207,10 @@ export default{
     }
 
     .button {
-      width: 200px;
-      height: 50px;
+      width: 250px;
+      height: 55px;
       border-radius: 50px;
-      font-size: 12pt;
+      font-size: 20px;
       letter-spacing: 2px;
       color: white;
       display: flex;
@@ -238,41 +238,43 @@ export default{
 
 .foodBox {
   width: 100%;
-  height: 50dvh;
+  height: 60dvh;
   background-color: #f5f5f5;
   border-radius: 30px 30px 0 0px;
-  margin-top: -30px;
+  margin-top: -5dvh;
   position: sticky;
-  top: 4dvh;
+  top: 5dvh;
+
   .textbox {
+    position: absolute;
+    top: 4dvh;
+    right: 12dvw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 35px;
-    padding-left: 40%;
 
     h1 {
-      font-size: 14pt;
+      font-size: 25px;
       letter-spacing: 2px;
       color: #39ab4b;
+      line-height: 40px;
     }
 
     p {
-      padding-top: -10px;
-      font-size: 10pt;
+      padding-top: 2dvh;
+      font-size: 18px;
       letter-spacing: 2px;
-      line-height: 25px;
-
-
+      line-height: 30px;
+      padding-bottom: 1dvh;
     }
 
     .button {
-      width: 200px;
-      height: 50px;
+      width: 250px;
+      height: 55px;
       border-radius: 50px;
-      font-size: 12pt;
+      font-size: 20px;
       letter-spacing: 2px;
       color: white;
       display: flex;
@@ -280,58 +282,63 @@ export default{
       align-items: center;
       background-color: #39ab4b;
       cursor: pointer;
-      margin-top: -1dvh;
+      margin-top: 1dvh;
 
       &:hover{
         scale: 0.95;
         background-color: #c6e058;
-
       }
-
-    }
-
     }
   }
 
+  .homePageImg {
+    width: 35dvw;
+    height: 40dvh;
+    position: absolute;
+    top: 7dvh;
+    left: 10dvw;
+  }
+}
+
 .carbonBox {
   width: 100%;
-  height: 50dvh;
+  height: 55dvh;
   background-color: #d5d5d5;
   border-radius: 30px 30px 0 0px;
-  margin-top: -30px;
+  margin-top: -5dvh;
   position: sticky;
-  top: 10dvh;
-
-
+  top: 20dvh;
 
   .textBox {
+    position: absolute;
+    top: 10dvh;
+    right: 25dvw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 90px;
-    padding-left: -25%;
 
     h1 {
-      font-size: 14pt;
+      font-size: 25px;
       letter-spacing: 2px;
       color: #39ab4b;
-      line-height: 30px;
+      line-height: 40px;
     }
 
     p {
-      padding-top: 10px;
-      font-size: 10pt;
+      padding-top: 2dvh;
+      font-size: 18px;
       letter-spacing: 2px;
-      line-height: 25px;
+      line-height: 30px;
+      padding-bottom: 1dvh;
     }
 
     .button {
-      width: 200px;
-      height: 50px;
+      width: 280px;
+      height: 55px;
       border-radius: 50px;
-      font-size: 12pt;
+      font-size: 20px;
       letter-spacing: 2px;
       color: white;
       display: flex;
@@ -339,16 +346,14 @@ export default{
       align-items: center;
       background-color: #39ab4b;
       cursor: pointer;
-      margin-top: 30px;
+      margin-top: 1dvh;
 
-      &:hover{
+      &:hover {
         scale: 0.95;
-        background-color: #c6e058;}
-
+        background-color: #c6e058;
+      }
     }
   }
-
-
 }
 
 .footer {
