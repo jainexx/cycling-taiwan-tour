@@ -219,7 +219,7 @@ $fifthColor: #d9d9d9;
             
         }
         .btnActive {
-            color:#1d5d27;
+            color:$secondColor;
             height: 100%;
             font-weight: bolder;
         }
