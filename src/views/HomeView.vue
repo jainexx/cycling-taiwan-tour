@@ -50,11 +50,6 @@ export default{
           <br>用雙輪丈量台灣，感受心靈的悸動，
           <br>這將是一段無可取代的難忘旅程。
         </p>
-        <h1>該去哪裡呢？</h1>
-        <p>台灣能去的地方五花八門，無論你是追求自然美景、歷史文化，
-          <br>還是現代都市的繁華，都能在這裡找到屬於你的驚喜。
-          <br>開啟你的多元台灣探索之旅吧！
-        </p>
         <RouterLink class="button" to="/FoodTourism" style="text-decoration: none;">前往我夢想的目的地</RouterLink>
         </div>
     </div>
@@ -192,7 +187,7 @@ export default{
     text-align: center;
 
     h1 {
-      font-size: 25px;
+      font-size: 20px;
       letter-spacing: 2px;
       color: #39ab4b;
       line-height: 40px;
@@ -253,7 +248,7 @@ export default{
     text-align: center;
 
     h1 {
-      font-size: 25px;
+      font-size: 20px;
       letter-spacing: 2px;
       color: #39ab4b;
       line-height: 40px;
@@ -279,7 +274,7 @@ export default{
       align-items: center;
       background-color: #39ab4b;
       cursor: pointer;
-      margin-top: 1dvh;
+      margin-top:1dvh;
 
       &:hover{
         scale: 0.95;
@@ -314,7 +309,7 @@ export default{
     text-align: center;
 
     h1 {
-      font-size: 25px;
+      font-size: 20px;
       letter-spacing: 2px;
       color: #39ab4b;
       line-height: 40px;
