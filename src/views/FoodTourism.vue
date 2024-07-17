@@ -257,7 +257,7 @@ body{
             }
             .content{
                 height: 50%;
-                width: 50%;
+                width:60%;
                 margin: auto;
                 display: flex;
                 justify-content: center;
@@ -265,7 +265,7 @@ body{
                 flex-wrap: wrap;
                 p{
                     color: white;
-                    font-size: 18px;
+                    font-size: 24px;
                 }
             }
         }
