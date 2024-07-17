@@ -22,16 +22,26 @@ export default {
   <button v-for="button in buttons" :key="button.id" @click="controlbuttonclick(button.text)">
     {{ button.text }}
   </button>
+
 </template>
 <style>
 button {
-  width: 100px;
-  height: 70px;
+  width: 70%;
+  height: 25%;
   font-size: 30px;
-  border-radius: 2dvh;
+  border-radius: 40dvh;
   transition: 0.5s;
-  background-color: #c6e058;
-  opacity: 0.7;
+  background-color: #ffffff;
+  color: #39ab4b;
+  font-weight: 800;
+  font-size: 45px;
+  letter-spacing: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  border: none;
 
 
   &:hover {
