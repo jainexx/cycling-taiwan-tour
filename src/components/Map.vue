@@ -30,7 +30,7 @@ export default {
         initMap() {
             const map = new google.maps.Map(this.$refs.map, {
                 center: new google.maps.LatLng(25.0374865, 121.5647688),
-                zoom: 16,
+                zoom: 17,
                 mapId: "4504f8b37365c3d0",
                 mapTypeControl: false,
             });
@@ -112,6 +112,14 @@ export default {
             })
             
         },
+        downloadMap(){
+            const link = document.createElement('a');
+            link.href = 'src/components/assets/BicycleRouteImg/環島1號線.kmz';
+            link.download = '環島1號線(9日).kmz'; //<a> 元素的download屬性，指定檔案名
+            document.body.appendChild(link);
+            link.click(); //觸發 <a> 元素的 click 事件，觸發download屬性
+            document.body.removeChild(link);
+        }
         
     },
 };
@@ -133,11 +141,11 @@ export default {
                 class="roundIslandMap"
             >
                 <div class="mapText">
-                    <h3>點選地圖左側選單，立即挑戰9日單車環島！</h3>
-                    <p>探索台灣的絕美風景，享受自由自在的騎行樂趣。</p>
-                    <p>
+                    <p>點選地圖左側選單，立即挑戰9日單車環島！探索台灣的絕美風景，享受自由自在的騎行樂趣!</p>
+                    <!-- <p>
                         不論你是初學者還是騎行高手，都能找到專屬你的理想路線！
-                    </p>
+                    </p> -->
+                    <button class="smallBtn1" @click="downloadMap">下載路線圖</button>
                 </div>
                 <iframe
                     src="https://www.google.com/maps/d/u/0/embed?mid=1FsrtdQ8tNj02hWkQw8ajiSVrhAJYCpo&ehbc=2E312F&noprof=1"
@@ -148,14 +156,16 @@ export default {
                 class="searchSpotMap"
             >
                 <div class="searchArea">
-                    <p>輸入地址</p>
-                    <input
-                        type="text"
-                        name="search"
-                        placeholder="請輸入地址..."
-                        ref="autocompleteInput"
-                    />
-                    <button id="searchUbikeBtn">搜尋附近Ubike</button>
+                    <p>搜尋附近YouBike</p>
+                    <div class="inputArea">
+                        <input
+                            type="text"
+                            name="search"
+                            placeholder="請輸入地址..."
+                            ref="autocompleteInput"
+                        />
+                        <button id="searchUbikeBtn" class="smallBtn2">搜尋</button>
+                    </div>
                 </div>
                 <div ref="map" id="mapApi"></div>
             </div>
@@ -247,12 +257,28 @@ $fifthColor: #d9d9d9;
                 align-items: center;
                 justify-content: center;
 
-                h3 {
-                    background: $fourthColor;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                    margin-bottom: 2%;
+                p{
+
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .smallBtn1 {
+                    width: 50%;
+                    letter-spacing: 10px;
+                    background: $secondColor;
+                    color: $fourthColor;
+                    border: $firstColor;
+                    font-size: 1.2rem;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover {
+                        scale: 1.2;
+                    }
+                    &:active {
+                        scale: 0.8;
+                    }
                 }
             }
 
@@ -280,29 +306,37 @@ $fifthColor: #d9d9d9;
                 flex-direction: column;
                 align-items: center;
                 p {
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     color: $secondColor;
                 }
 
-                input {
-                    border: $secondColor;
-                    margin-bottom: 1%;
-                    font-size: 1.2rem;
-                    width: 40dvw;
-                }
-                button {
-                    background: $secondColor;
-                    color: $fourthColor;
-                    border: $firstColor;
-                    font-size: 1.2rem;
-                    border-radius: 2px;
-                    cursor: pointer;
-                    transition: all 0.3s;
-                    &:hover {
-                        scale: 1.2;
+                .inputArea{
+                    display: flex;
+                    margin-top: 1%;
+                    input {
+                        width: 40dvw;
+                        height: 5dvh;
+                        border: $secondColor;
+                        margin-bottom: 1%;
+                        font-size: 1.2rem;
+                        border-top-left-radius:10px;
+                        border-bottom-left-radius:10px;
                     }
-                    &:active {
-                        scale: 0.8;
+                    .smallBtn2 {
+                        width: 15%;
+                        height: 5dvh;
+                        //letter-spacing: 10px;
+                        background: $secondColor;
+                        color: $fourthColor;
+                        border: $firstColor;
+                        font-size: 1.2rem;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &:hover {
+                            font-weight: bold;
+                        }
                     }
                 }
             }
