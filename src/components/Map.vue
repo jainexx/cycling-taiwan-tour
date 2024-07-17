@@ -5,6 +5,7 @@ export default {
             isRoundIslandVisible: true,
             selectedPlace: {},
             btnIsActive: false,
+            switchBtn: false,
 
         };
     },
@@ -19,9 +20,13 @@ export default {
             this.isRoundIslandVisible = false;
         },
         btnChangeColor(){
+            this.switchBtn = false;
             this.btnIsActive = !this.btnIsActive;
-        }
-        ,
+        },
+        anotherBtnChange(){
+            this.switchBtn = !this.switchBtn;
+            this.btnIsActive = false;
+        },
         initMap() {
             const map = new google.maps.Map(this.$refs.map, {
                 center: new google.maps.LatLng(25.0374865, 121.5647688),
@@ -118,7 +123,7 @@ export default {
             <button @click="showRoundIslandMap();btnChangeColor()" class="roundIslandBtn" :class="{'btn':true, 'btnActive': btnIsActive }">
                 環島路線
             </button>
-            <button  @click="showSearchSpotMap();btnChangeColor()" class="searchSpotBtn" :class="{'btn':true, 'btnActive': btnIsActive }">
+            <button  @click="showSearchSpotMap();anotherBtnChange()" class="searchSpotBtn" :class="{'btn':true, 'btnActive': switchBtn }">
                 搜尋共享單車
             </button>
         </div>
