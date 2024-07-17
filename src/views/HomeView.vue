@@ -1,10 +1,11 @@
 <script>
 import breadCrum from '../components/breadCrum.vue'
 
-export default{
-    components:{
+export default {
+    components: {
         breadCrum
-    }
+    },
+    
 }
 </script>
 
@@ -176,7 +177,7 @@ export default{
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   .text{
@@ -184,6 +185,7 @@ export default{
     align-items: center;
     flex-direction: column;
     align-items: center;
+    flex: 1;
     text-align: center;
 
     h1 {
@@ -225,6 +227,7 @@ export default{
   .bicycleLine {
     width: 50dvw;
     height: 40dvh;
+    margin-left: auto;
   }
 }
 
