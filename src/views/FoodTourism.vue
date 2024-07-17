@@ -258,7 +258,7 @@ body{
             .content{
                 height: 50%;
                 width:60%;
-                margin: auto;
+                margin: -30px auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;

@@ -98,6 +98,7 @@ export default {
             color: #39AB4B;
             .title{
                 font-size: 36px;
+                margin-top: 40px;  
             }
             .content{
                 margin-top: 40px;

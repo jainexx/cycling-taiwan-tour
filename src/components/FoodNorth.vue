@@ -111,10 +111,12 @@ export default {
             text-align: center;
             color: #39AB4B;
             .title{
-                font-size: 36px;
+                font-size: 36px;  
+                margin-top: 40px;  
             }
             .content{
-                margin-top: 40px;
+                width: 90%;
+                margin-top: 20px;
                 font-size: 24px;
             }
             button{
