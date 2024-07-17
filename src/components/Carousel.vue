@@ -91,12 +91,13 @@ export default {
             ]
         };
     },
-    mounted() {
+    mounted () {
         this.initCarousel();
     },
     methods: {
         initCarousel() {
-            $('.owl-carousel').owlCarousel({
+            const owl = $('.owl-carousel');
+            owl.owlCarousel ({
                 loop: true,
                 margin: 10,
                 responsiveClass: true,
@@ -117,6 +118,10 @@ export default {
                     }
                 }
             });
+            // 手動更新頁面窗口大小變更，觸發 resize 事件以確保輪播顯示正確
+            $(window).trigger('resize');
+            // 手動刷新頁面窗口，觸發 refresh 事件重新渲染元件以確保輪播顯示正確
+            owl.trigger('refresh.owl.carousel');
         }
     }
 };
