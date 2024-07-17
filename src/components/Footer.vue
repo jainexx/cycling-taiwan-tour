@@ -16,16 +16,15 @@
 
 <style scoped lang="scss">
 .footer {
-  position: absolute;
-  height: 39dvh;
+  height: 35dvh;
   background: black;
   position: relative;
 
   img {
-    width: 15dvw;
-    height: 15dvh;
+    width: 20dvw;
+    height: 10dvh;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 1%;
   }
 
@@ -48,7 +47,7 @@
 
   .footerBotLine {
     position: absolute;
-    top: 304px;
+    bottom: 0%;
     height: 3%;
     background-color: rgba(57, 171, 75, 1);
     width: 100%;

@@ -312,7 +312,7 @@ export default{
   .textBox {
     position: absolute;
     top: 10dvh;
-    right: 21dvw;
+    right: 28dvw;
     display: flex;
     justify-content: center;
     flex-direction: column;
