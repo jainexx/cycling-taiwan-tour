@@ -13,14 +13,15 @@ export default{
 
     <div class="topImage">
         <div class="threeImg">
-            <img src="../components/assets/HomePageImg/topbanner01.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner02.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
-            <img src="../components/assets/HomePageImg/topbanner03.png" width="300dvw" style="border-radius: 150px;opacity:70%;">
+            <img src="../components/assets/HomePageImg/topbanner01.png">
+            <img src="../components/assets/HomePageImg/topbanner02.png">
+            <img src="../components/assets/HomePageImg/topbanner03.png">
         </div>
 
-        <div class="women">
+        <img class="women" src="../components/assets/HomePageImg/ubike-woman.svg">
+        <!-- <div class="women">
             <img src="../components/assets/HomePageImg/ubike-woman.svg" width="350dvw">
-        </div>
+        </div> -->
 
         <div class="topcontent">
             <p class="firstContent">從北到南,從東到西,</p>
@@ -29,7 +30,6 @@ export default{
         </div>
     </div>
 
-    
     <div class="bicycleLineBox">
         <div class="text">
           <h1>開啟你的環台之旅：我們幫你準備好了！</h1>
@@ -80,10 +80,12 @@ export default{
 <style scoped lang="scss">
 .topImage {
   width: 100dvw;
-  height: 70dvh;
+  height: 60dvh;
   background: linear-gradient(180deg, rgb(55, 170, 72), rgb(57, 171, 75));
 
   .threeImg {
+    width: 100dvw;
+    height: 50dvh;
     display: flex;
     justify-content: space-around;
     padding-top: 5dvh;
@@ -92,42 +94,47 @@ export default{
     animation-duration: 3s;
     animation-direction: reverse;
 
-    @keyframes example {
-      from {
-        opacity: 100%;
-        filter: blur(2px);
-      }
+    img {
+      width: 20%;
+      border-radius: 150px;
+      opacity: 70%;
 
-      to {
-        opacity: 0%;
-        filter: blur(10px);
+      @keyframes example {
+        from {
+          opacity: 100%;
+          filter: blur(2px);
+        }
+
+        to {
+          opacity: 0%;
+          filter: blur(10px);
+        }
       }
     }
   }
 
   .women {
-    img {
-      position: absolute;
-      top: 30dvh;
-      left: 10dvw;
-      // transform: translateX(50%);
-      // transition: all 0.5s;
-      animation-name: wom;
-      animation-duration: 2.5s;
-      animation-direction: reverse;
+    width: 20dvw;
+    position: absolute;
+    top: 30dvh;
+    left: 10dvw;
+    // transform: translateX(50%);
+    // transition: all 0.5s;
+    animation-name: wom;
+    animation-duration: 2.5s;
+    animation-direction: reverse;
 
-      @keyframes wom {
-        from {
-          opacity: 1;
-          transform: translateX(0%);
-          filter: blur(0px);
-        }
+    @keyframes wom {
+      from {
+        opacity: 1;
+        transform: translateX(0%);
+        filter: blur(0px);
+      }
 
-        to {
-          opacity: 0;
-          transform: translateX(100%);
-          filter: blur(5px);
-        }
+      to {
+        opacity: 0;
+        transform: translateX(100%);
+        filter: blur(5px);
       }
     }
   }
@@ -135,7 +142,7 @@ export default{
 
 .topcontent {
   position: absolute;
-  top: 40dvh;
+  top: 35dvh;
   left: 50%;
   color: #f5f5f5;
   font-size: 15pt;
@@ -152,7 +159,7 @@ export default{
   @keyframes example {
     from {
       opacity: 100%;
-      top: 40dvh;
+      top: 35dvh;
       filter: blur(0px);
     }
 
