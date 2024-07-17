@@ -19,9 +19,6 @@ export default{
         </div>
 
         <img class="women" src="../components/assets/HomePageImg/ubike-woman.svg">
-        <!-- <div class="women">
-            <img src="../components/assets/HomePageImg/ubike-woman.svg" width="350dvw">
-        </div> -->
 
         <div class="topcontent">
             <p class="firstContent">從北到南,從東到西,</p>
@@ -39,8 +36,9 @@ export default{
           </p>
           <h1>準備好了嗎？騎上YouBike，<br>開啟一段難忘的環台之旅吧！</h1>
           <RouterLink class="button" to="/BicycleRoute" style="text-decoration: none;">馬上開始旅程！</RouterLink>
-          <img src="../components/assets/HomePageImg/bicycleline01.png" alt="" width="850dvw" style="position: absolute;top: -40px;left: 440px;">
         </div>
+
+        <img class="bicycleLine" src="../components/assets/HomePageImg/bicycleline01.png">
     </div>
 
     <div class="foodBox">
@@ -149,8 +147,6 @@ export default{
   font-weight: 500;
   color: white;
   text-shadow: black 0.2em 0.2em 0.8em;
-
-
   animation-name: example;
   animation-duration: 2.5s;
   animation-direction: reverse;
@@ -177,8 +173,8 @@ export default{
 }
 
 .bicycleLineBox {
-  width: 100%;
-  height: 50dvh;
+  width: 100dvw;
+  height: 60dvh;
   background-color: #d9d9d9;
   border-radius: 30px 30px 0 0px;
   margin-top: -5dvh;
@@ -187,7 +183,7 @@ export default{
 
   .text{
     position: absolute;
-    top: 6dvh;
+    top: 12dvh;
     left: 12dvw;
     display: flex;
     align-items: center;
@@ -195,40 +191,49 @@ export default{
     align-items: center;
     text-align: center;
 
-  h1 {
-    font-size: 14pt;
-    letter-spacing: 2px;
-    color: #39ab4b;
-    line-height: 30px;
+    h1 {
+      font-size: 25px;
+      letter-spacing: 2px;
+      color: #39ab4b;
+      line-height: 40px;
+    }
+
+    p {
+      padding-top: 2dvh;
+      font-size: 18px;
+      letter-spacing: 2px;
+      line-height: 30px;
+      padding-bottom: 1dvh;
+    }
+
+    .button {
+      width: 200px;
+      height: 50px;
+      border-radius: 50px;
+      font-size: 12pt;
+      letter-spacing: 2px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #39ab4b;
+      cursor: pointer;
+      margin-top: 1dvh;
+
+      &:hover {
+        scale: 0.95;
+        background-color: #c6e058;
+      }
+    }
   }
 
-  p {
-    padding-top: 2dvh;
-    font-size: 10pt;
-    letter-spacing: 2px;
-    line-height: 25px;
-    padding-bottom: 1dvh;
+  .bicycleLine {
+    width: 55dvw;
+    height: 40dvh;
+    position: absolute;
+    top: 10dvh;
+    left: 45dvw;
   }
-
-  .button {
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 12pt;
-    letter-spacing: 2px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #39ab4b;
-    cursor: pointer;
-    margin-top: 1dvh;
-
-    &:hover{
-      scale: 0.95;
-      background-color: #c6e058;}
-
-  }}
 }
 
 .foodBox {
