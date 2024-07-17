@@ -17,7 +17,7 @@
 <style scoped lang="scss">
 .footer {
   position: absolute;
-  height: 35dvh;
+  height: 39dvh;
   background: black;
   position: relative;
 
