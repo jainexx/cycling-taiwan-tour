@@ -55,7 +55,6 @@ export default {
         <div class="Trapzoid1">
           <div class="square1">
 
-            <i class="fa-solid fa-car"></i>
             <TrafficButtons @area-change="this.showareatext" />
             <!-- <div class="tiny1">
             <button class="car">汽車</button>
