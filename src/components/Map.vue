@@ -325,7 +325,6 @@ $fifthColor: #d9d9d9;
                     .smallBtn2 {
                         width: 15%;
                         height: 5dvh;
-                        //letter-spacing: 10px;
                         background: $secondColor;
                         color: $fourthColor;
                         border: $firstColor;
