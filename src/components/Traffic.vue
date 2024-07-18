@@ -46,6 +46,9 @@ button {
 
   &:hover {
     scale: 0.9;
+    background: #39ab4b ;
+    color: white;
+
   }
 }
 </style>
